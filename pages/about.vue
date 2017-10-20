@@ -1,6 +1,6 @@
 <template>
     <div>
-      about
+      {{name}}{{id}}
     </div>
 </template>
 
@@ -9,8 +9,15 @@ export default {
   head: {
     title: 'ABOUT',
     meta: [
-      { hid: 'description', name: 'description', content: '这是about的描述' }
+      { hid: 'description', name: 'description', content: '这是ABOUT的描述' }
     ]
+  },
+  data: () => {
+    return {
+      name: 'world',
+      id: 90,
+      mes: 'aaa'
+    }
   }
 }
 </script>
