@@ -7,7 +7,7 @@
 <script>
 export default {
   head: {
-    title: 'MINE',
+    title: '安厨供应链',
     meta: [
       { hid: 'description', name: 'description', content: '这是mine的描述' }
     ]

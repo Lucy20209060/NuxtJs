@@ -24,30 +24,30 @@
 </template>
 
 <script>
-export default {
-  data: () => {
-    return {
-      nav: [
-        {
-          ZNTitle: '走近安厨',
-          ENTitle: 'APPROACH<br>ANCHU',
-          link: 'index'
-        },
-        {
-          ZNTitle: '安厨严选',
-          ENTitle: 'APPROACH<br>ANCHU',
-          link: 'about'
+  export default {
+    data: () => {
+      return {
+        nav: [
+          {
+            ZNTitle: '走近安厨',
+            ENTitle: 'APPROACH<br>ANCHU',
+            link: 'index'
+          },
+          {
+            ZNTitle: '安厨严选',
+            ENTitle: 'APPROACH<br>ANCHU',
+            link: 'about'
 
-        },
-        {
-          ZNTitle: '安厨供应链',
-          ENTitle: 'APPROACH<br>ANCHU',
-          link: 'mine'
-        }
-      ]
+          },
+          {
+            ZNTitle: '安厨供应链',
+            ENTitle: 'APPROACH<br>ANCHU',
+            link: 'mine'
+          }
+        ]
+      }
     }
   }
-}
 </script>
 
 <style scoped>
