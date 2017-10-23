@@ -17,9 +17,11 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  // router: {
-  //   linkActiveClass: 'active-link'
-  // },
+  router: {
+    scrollBehavior: function (to, from, savedPosition) {
+      return { x: 0, y: 0 }
+    }
+  },
   css:[
     'assets/main.css',
     'assets/font/iconfont.css'

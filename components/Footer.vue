@@ -2,7 +2,7 @@
   <section class="footer">
     <div class="footer-center">
     	<p class="footer-logo">
-    		<img src="~/static/img/insect2.png">
+    		<img src="~/static/img/logo2.png">
     	</p>
 
     	<dl class="footer-contact">
@@ -15,17 +15,17 @@
 
 		<figure>
 			<figcaption>安厨微店</figcaption>
-			<img src="~/static/img/insect2.png">
+			<img src="~/static/img/logo2.png">
 		</figure>
 
 		<figure>
 			<figcaption>安厨微信</figcaption>
-			<img src="~/static/img/insect2.png">
+			<img src="~/static/img/logo2.png">
 		</figure>
 
 		<figure>
 			<figcaption>安厨微博</figcaption>
-			<img src="~/static/img/insect2.png">
+			<img src="~/static/img/logo2.png">
 		</figure>
 
     </div>
