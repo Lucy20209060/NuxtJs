@@ -1,7 +1,7 @@
 <template>
 	<section>
     <a href="http://wd.hzanchu.com" target="_blank" class="banner">
-      <img src="~/static/weidian/wd1.png">
+      <img src="~/static/img/weidian/wd1.png">
     </a>
 
     <div class="content">
@@ -35,7 +35,7 @@
   	position: relative;
   	width: 100%;
   	height: 626px;
-  	background:url('~/static/weidian/wd2.png') no-repeat center;
+  	background:url('~/static/img/weidian/wd2.png') no-repeat center;
   	border-top: 150px solid transparent;
   	border-bottom: 122px solid transparent;
   }

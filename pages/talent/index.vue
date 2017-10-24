@@ -1,13 +1,13 @@
 <template>
     <div>
-      farmers
+      兵强马壮
     </div>
 </template>
 
 <script>
 export default {
   head: {
-    title: '对农服务'
+    title: '兵强马壮'
   }
 }
 </script>

@@ -2,10 +2,6 @@
   <section class="container">
     <div class="text-wrap" v-for="(item,index) in pageText" :key="index">
       <div class="text-center">
-        <!-- <h2>
-          <i class="iconfont">&#xe69e;</i>
-          <span v-html="item.title"></span>
-        </h2> -->
         <fourWorlds :title="item.title" />
         <p v-for="(items,indexs) in item.text" :key="indexs">{{items}}</p>
         <img :src='item.img' alt="item.title">
@@ -19,9 +15,12 @@ import intentionImg from '~/static/img/idea/intention.png'
 import beliefImg from '~/static/img/idea/belief.png'
 import futureImg from '~/static/img/idea/future.png'
 
-import fourWorlds from '~/components/fourWordsTitle'
+import fourWorlds from '~/components/iconTitle'
 
 export default {
+  head: {
+    title: '安厨理念'
+  },
   data () {
     return {
       pageText: [
@@ -59,6 +58,9 @@ export default {
 </script>
 
 <style scoped>
+  .container{
+    padding-top: 28px;
+  }
   .text-wrap{
     width: 100%;
   }

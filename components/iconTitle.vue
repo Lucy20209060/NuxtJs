@@ -17,6 +17,10 @@ export default {
 </script>
 
 <style scoped>
+  h2{
+    text-align: center;
+    padding-bottom: 26px;
+  }
   i{
   	color: #e95513;
     display: block;
@@ -28,6 +32,6 @@ export default {
     font-family: PingFangSC-Semibold;
     font-size: 24px;
     line-height: 30px;
-    padding-bottom: 26px;
+    
   }
 </style>

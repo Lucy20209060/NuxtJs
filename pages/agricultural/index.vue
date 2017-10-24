@@ -1,13 +1,13 @@
 <template>
     <div>
-      talent
+      县域农业电商服务
     </div>
 </template>
 
 <script>
 export default {
   head: {
-    title: '求贤通道'
+    title: '县域农业电商服务'
   }
 }
 </script>

@@ -2,28 +2,34 @@
   <section class="header">
     <div class="header-center">
     
-      <nuxt-link tag="h2" to="/index" class="logo">
+      <nuxt-link tag="h2" to="/" class="logo">
         <img src="~/static/img/logo1.png" alt="安厨">
       </nuxt-link>
 
-      <ul class="nav">
+      <ul class="nav" @mouseleave="navLeave">
         <nuxt-link 
           tag="li" 
           v-for="(item,indexs) in nav" 
-          :to="{ name: item.link }" 
+          :to="{ path: item.link }" 
           key="indexs"
-          @click.native="navTap(item)">
+          @mouseenter.native="navEnter(indexs)"
+          :class="[
+            indexs == navSign ? 'nav-enter-active' : ''
+          ]">
 
           <i v-html="item.ENTitle"></i>
-          <span @mouseenter="navEnter(indexs)">{{item.ZNTitle}}</span>
+          <span>{{item.ZNTitle}}</span>
 
           <div 
-            :class="[
-              'nav-list',
-              indexs == navSign ? 'nav-list-active' : ''
-            ]"
-          >
-            <p v-for="(items,index) in item.navList" key="index">{{items.title}}</p>
+            :style="{ width: item.width ? '156px' : '90px' }"
+            class="nav-list">
+            <nuxt-link
+              tag="p"
+              v-for="(items,index) in item.navList" 
+              :key="index"
+              :to="{ path: items.link }"
+            >{{items.title}}
+            </nuxt-link>
           </div>
         </nuxt-link>
       </ul>
@@ -40,144 +46,187 @@
           {
             ZNTitle: '走近安厨',
             ENTitle: 'APPROACH<br>ANCHU',
-            link: 'index',
+            link: '/',
             navList: [
               {
                 title: '安厨简介',
-                link: ''
+                link: '/'
               },
               {
                 title: '安厨理念',
-                link: ''
+                link: '/anchu/idea'
               },
               {
                 title: '安厨事纪',
-                link: ''
+                link: '/anchu/event'
               },
               {
                 title: '安厨故事',
-                link: ''
+                link: '/anchu/story'
               }
             ]
           },
           {
             ZNTitle: '安厨严选',
             ENTitle: 'STRICT<br>SELECTION',
-            link: 'selection',
+            link: '/selection',
             navList: [
               {
                 title: '源头把控',
-                link: ''
+                link: '/selection'
               },
               {
                 title: '精雕细琢',
-                link: ''
+                link: '/selection/elaborate'
               },
               {
                 title: '物流体系',
-                link: ''
+                link: '/selection/logistics'
               },
               {
                 title: '售后服务',
-                link: ''
+                link: '/selection/service'
               },
               {
                 title: '案例介绍',
-                link: ''
+                link: '/selection/case'
               }
             ]
           },
           {
             ZNTitle: '安厨供应链',
             ENTitle: 'SUPPLY<br>CHAIN',
-            link: 'supply',
+            link: '/supply',
             navList: []
           },
           {
             ZNTitle: '安厨微店',
             ENTitle: 'ANCHU<br>SHOP',
-            link: 'shop',
+            link: '/shop',
             navList: []
           },
           {
             ZNTitle: '驰声走誉',
             ENTitle: 'REPUTATION<br>RAPIDLY',
-            link: 'reputation',
+            link: '/reputation',
             navList: [
               {
                 title: '安厨声音',
-                link: ''
+                link: '/reputation'
               },
               {
                 title: '安厨专利',
-                link: ''
+                link: '/reputation/patent'
               },
               {
                 title: '获得荣誉',
-                link: ''
+                link: '/reputation/honor'
               },
               {
                 title: '政府合作',
-                link: ''
+                link: '/reputation/cooperation'
               }
             ]
           },
           {
             ZNTitle: '对农服务',
             ENTitle: 'SERVING<br>FARMERS ',
-            link: 'farmers',
+            link: '/agricultural',
+            width: true,
             navList: [
               {
                 title: '县域农业电商服务',
-                link: ''
+                link: '/agricultural'
               },
               {
                 title: '电商培训',
-                link: ''
+                link: '/agricultural/train'
               },
               {
                 title: '电商产业园',
-                link: ''
+                link: '/agricultural/industrial'
               },
               {
                 title: '农业基地',
-                link: ''
+                link: '/agricultural/base'
               }
             ]
           },
           {
             ZNTitle: '求贤通道',
             ENTitle: 'SEEK<br>TALENT',
-            link: 'talent',
+            link: '/talent',
             navList: [
               {
                 title: '兵强马壮',
-                link: ''
+                link: '/talent'
               },
               {
                 title: '能者来战',
-                link: ''
+                link: '/talent/join'
               }
             ]
           }
         ],
+        pagePath: '',
         show: false,
-        navSign: 3
+        navSign: 0,
+        overSign: -1
       }
     },
+    created () {
+      this.routeChange()
+    },
+    // mounted () {
+    // },
+    watch: {
+      // 如果路由有变化，会再次执行该方法
+      '$route': 'routeChange'
+    },
     methods: {
-      navEnter (index) {
-        this.navSign = index
-        console.log(index)
+      routeChange () {
+        const currentRoute = this.$router.currentRoute.name
+        // let pathSign
+        if (currentRoute.indexOf('index') !== -1) {
+          this.navSign = 0
+          return false
+        }
+        if (currentRoute.indexOf('anchu') !== -1) {
+          this.navSign = 0
+          return false
+        }
+        if (currentRoute.indexOf('selection') !== -1) {
+          this.navSign = 1
+          return false
+        }
+        if (currentRoute.indexOf('supply') !== -1) {
+          this.navSign = 2
+          return false
+        }
+        if (currentRoute.indexOf('shop') !== -1) {
+          this.navSign = 3
+          return false
+        }
+        if (currentRoute.indexOf('reputation') !== -1) {
+          this.navSign = 4
+          return false
+        }
+        if (currentRoute.indexOf('agricultural') !== -1) {
+          this.navSign = 5
+          return false
+        }
+        if (currentRoute.indexOf('talent') !== -1) {
+          this.navSign = 6
+          return false
+        }
       },
-      navTap (par) {
-        // console.log(par.ENTitle === 'SUPPLY<br>CHAIN')
-
-        // return false
-
-        // http://wd.hzanchu.com/
-
-        // window.location.href = 'http://www.baidu.com'
+      // 滑过导航
+      navEnter (index) {
+        // console.log(index)
+        // this.overSign = index
+      },
+      navLeave () {
+        // this.routeChange()
       }
     }
   }
@@ -233,43 +282,57 @@
     line-height: 30px;
 
   }
-  .nav .nuxt-link-exact-active{
-    background:rgba(0,0,0,0.10);
-  }
-  .nav .nuxt-link-exact-active i{
-    visibility: visible;
-  }
   .nav-list{
     position: absolute;
     top: 93px;
     left: 0;
-    background: rgba(255,255,255,0.50);
+    /*background: rgba(255,255,255,0.50);*/
+    background: #fff;
+    box-shadow: 0 0 4px 0 #d9d9d9;
     opacity: 0;
-    width: 152px;
+    display: none;
+    z-index: 99;
   }
   .nav-list p{
     padding: 0 12px;
     line-height: 36px;
 
   }
+  .nav-list .nuxt-link-exact-active{
+    background: #f5f5f5;
+  }
   .nav-list p:hover{
-    background: rgba(255,255,255,0.80);
+    background: #f5f5f5;
 
   }
-  .nav-active{
-    color: red;
+  .nav-enter-active{
+    background:rgba(0,0,0,0.10);
+  }
+  .nav-enter-active i{
+    visibility: visible;
   }
 
-  .nav-list-active{
-    animation:mymove 2s;
+  .nav li:hover .nav-list{
+    animation:mymove 1s;
+    display: block;
     animation-fill-mode:forwards;
   }
 
+  @keyframes mymove{
+    0 {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  /*媒体查询*/
+  @media screen and (max-width: 750px) {
+    .header-center{
+      width: 90%;
+    }
 
-  @keyframes mymove
-  {
-    from {opacity:0;}
-    to {opacity:1;}
   }
   
 </style>
