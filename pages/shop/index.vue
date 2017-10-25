@@ -18,6 +18,14 @@
 	</section>
 </template>
 
+<script>
+  export default {
+    head: {
+      title: '安厨微店'
+    }
+  }
+</script>
+
 <style scoped>
   .banner{
   	width: 100%;

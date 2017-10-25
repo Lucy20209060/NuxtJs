@@ -12,24 +12,26 @@
           v-for="(item,indexs) in nav" 
           :to="{ path: item.link }" 
           key="indexs"
-          @mouseenter.native="navEnter(indexs)"
           :class="[
             indexs == navSign ? 'nav-enter-active' : ''
           ]">
 
           <i v-html="item.ENTitle"></i>
-          <span>{{item.ZNTitle}}</span>
+          <span @mouseover="navOver(indexs)">{{item.ZNTitle}}</span>
 
           <div 
             :style="{ width: item.width ? '156px' : '90px' }"
-            class="nav-list">
+            :class="[
+              'nav-list',
+              indexs == navOverSign ? 'nav-over-active' : ''
+            ]">
             <nuxt-link
               tag="p"
               v-for="(items,index) in item.navList" 
               :key="index"
               :to="{ path: items.link }"
-            >{{items.title}}
-            </nuxt-link>
+              @click.native="navLeave"
+            >{{items.title}}</nuxt-link>
           </div>
         </nuxt-link>
       </ul>
@@ -171,7 +173,7 @@
         pagePath: '',
         show: false,
         navSign: 0,
-        overSign: -1
+        navOverSign: -1 // 滑过标志
       }
     },
     created () {
@@ -221,12 +223,11 @@
         }
       },
       // 滑过导航
-      navEnter (index) {
-        // console.log(index)
-        // this.overSign = index
+      navOver (index) {
+        this.navOverSign = index
       },
       navLeave () {
-        // this.routeChange()
+        this.navOverSign = -1
       }
     }
   }
@@ -286,12 +287,16 @@
     position: absolute;
     top: 93px;
     left: 0;
-    /*background: rgba(255,255,255,0.50);*/
     background: #fff;
     box-shadow: 0 0 4px 0 #d9d9d9;
     opacity: 0;
-    display: none;
-    z-index: 99;
+    z-index: -1;
+    transition: opacity 1s;
+  }
+  /*鼠标滑过*/
+  .nav-over-active{
+    opacity: 1;
+    z-index: 999;
   }
   .nav-list p{
     padding: 0 12px;
@@ -303,19 +308,12 @@
   }
   .nav-list p:hover{
     background: #f5f5f5;
-
   }
   .nav-enter-active{
     background:rgba(0,0,0,0.10);
   }
   .nav-enter-active i{
     visibility: visible;
-  }
-
-  .nav li:hover .nav-list{
-    animation:mymove 1s;
-    display: block;
-    animation-fill-mode:forwards;
   }
 
   @keyframes mymove{

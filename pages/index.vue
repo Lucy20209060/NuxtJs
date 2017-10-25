@@ -9,12 +9,23 @@
       <my-video :sources="video.sources" :options="video.options"></my-video>
     </div>
 
-    <div class="four-modular">
+    <!-- <div class="four-modular">
       <p v-for="(item,index) in fourModular" :key="index">
         <span>{{item.title}}</span>
         <i>{{item.text}}</i>
       </p>
-    </div>
+    </div> -->
+
+    <table cellspacing="0" class="four-modular">
+      <tbody>
+        <tr>
+          <td v-for="(item,index) in fourModular" :key="index">
+            <span>{{item.title}}</span>
+            <i>{{item.text}}</i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
   </section>
 </template>
@@ -73,7 +84,7 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .synopsis{
     width: 1200px;
     height: auto;
@@ -94,54 +105,47 @@
   }
   .four-modular{
     margin-top: 56px;
-  }
-  .four-modular:after{
-    content:".";
-    display:block;
-    height:0;
-    clear:both;
-    overflow:hidden;
-    visibility:hidden;
-  }
-  .four-modular p{
-    float: left;
-    width: 25%;
-    min-height: 163px;
-    border: 1px solid #E7E7E7;
-    border-right: 1px solid transparent;
-    box-sizing:border-box;
-    padding: 28px 55px;
-    color: #375D77;
-    cursor: pointer;
-  }
-  .four-modular p:last-child{
-    border-right: 1px solid #E7E7E7;
-  }
-  .four-modular p span{
-    font-size: 24px;
-    position: relative;
-  }
-  .four-modular p span:after{
-    position: absolute;
-    content: ' ';
-    width: 20px;
-    height: 2px;
-    background: #EA5614;
-    bottom: -10px;
-    left: 50%;
-    margin-left: -10px;
-
-  }
-  .four-modular p span{
-    display: block;
-  }
-  .four-modular p i{
-    display: block;
-    margin-top: 36px;
-    font-size: 14px;
-  }
-  .four-modular p:hover{
-    box-shadow: 0 0 8px 0 rgba(217,217,217,0.5);
+    td{
+      width: 25%;
+      border: 1px solid #E7E7E7;
+      border-right: 1px solid transparent;
+      box-sizing:border-box;
+      padding: 28px 55px;
+      color: #375D77;
+      cursor: pointer;
+      background: #fff;
+      position: relative;
+      z-index: 1;
+      transform:translateY(0);
+      transition: transform .3s;
+      &:hover{
+        z-index: 999;
+        box-shadow: 0 0 8px 0 rgba(217,217,217,.5);
+        transform:translateY(-5px);
+      }
+      &:last-child{
+        border-right: 1px solid #E7E7E7;
+      }
+      span{
+        font-size: 24px;
+        position: relative;
+        &:after{
+          position: absolute;
+          content: ' ';
+          width: 20px;
+          height: 2px;
+          background: #EA5614;
+          bottom: -10px;
+          left: 50%;
+          margin-left: -10px;
+        }
+      }
+      i{
+        display: block;
+        margin-top: 36px;
+        font-size: 14px;
+      }
+    }
   }
 
   /*媒体查询*/
@@ -149,12 +153,12 @@
     .synopsis{
       width: 90%;
     }
-    .four-modular p{
+    .four-modular td{
       padding: 20px 36px;
     }
   }
   @media screen and (max-width: 750px) {
-    .four-modular p{
+    .four-modular td{
       padding: 10px 20px;
     }
 

@@ -14,20 +14,18 @@
     	</dl>
       
       <div class="qrCode">
-    		<figure>
-    			<figcaption>安厨微店</figcaption>
-    			<img src="~/static/img/logo2.png">
-    		</figure>
 
-    		<figure>
-    			<figcaption>安厨微信</figcaption>
-    			<img src="~/static/img/logo2.png">
-    		</figure>
+        <figure v-for="(item,index) in qrCode" :key="index" @mouseover="qrCodeOver(index)" @mouseout="qrCodeOut(index)">
+          <figcaption>{{item.title}}</figcaption>
+          <img 
+            :src="item.code" 
+            :class="[
+              (index != imgSign) && (imgSign != -1) ? 'imgFilter' : '',
+              index == imgSign ? 'imgScale' : ''
+            ]"
+          >
+        </figure>
 
-    		<figure>
-    			<figcaption>安厨微博</figcaption>
-    			<img src="~/static/img/logo2.png">
-    		</figure>
       </div>
 
     </div>
@@ -36,8 +34,13 @@
 </template>
 
 <script>
+  import anchugyl from '~/static/img/qrCode/anchugyl.jpg'
+  import anchuwd from '~/static/img/qrCode/anchuwd.jpg'
+  import acweibo from '~/static/img/qrCode/acweibo.png'
+  import acweixin from '~/static/img/qrCode/acweixin.jpg'
+
   export default {
-    data: () => {
+    data () {
       return {
         contact: [
           {
@@ -64,7 +67,36 @@
           {
             address: '安厨淳安站'
           }
-        ]
+        ],
+        qrCode: [
+          {
+            title: '安厨供应链',
+            code: anchugyl
+          },
+          {
+            title: '安厨微店官方号',
+            code: anchuwd
+          },
+          {
+            title: '安厨官微',
+            code: acweibo
+          },
+          {
+            title: '安厨公众号',
+            code: acweixin
+          }
+        ],
+        imgSign: -1
+      }
+    },
+    methods: {
+      // 二维码滑过
+      qrCodeOver (index) {
+        this.imgSign = index
+      },
+      // 二维码滑出
+      qrCodeOut (index) {
+        this.imgSign = -1
       }
     }
   }
@@ -109,15 +141,34 @@
   	display: inline-block;
   	font-size: 14px;
   }
-  .qrCode{
-    overflow: hidden;
+  .qrCode:after{
+    content:".";
+    display:block;
+    height:0;
+    clear:both;
+    overflow:hidden;
+    visibility:hidden;
   }
   figure{
   	float: left;
-  	margin-right: 50px;
+  	padding-right: 50px;
+    width: 116px;
+  }
+  figure img{
+    width: 83%;
+    height: auto;
+    filter: blur(0px);
+    transform:scale(1);
+    transition: all 1s;
+  }
+  .imgFilter{
+    filter: blur(5px);
+  }
+  .imgScale{
+    transform:scale(1.3);
   }
   figcaption{
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     color: #129E83;
   }
  /*媒体查询*/
@@ -132,7 +183,7 @@
   }
   @media screen and (max-width: 750px) {
     figure{
-      margin-right: 10px;
+      padding-right: 10px;
     }
     figure img{
       width: 80%;

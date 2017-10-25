@@ -7,7 +7,7 @@
 <script>
 	export default {
 	  head: {
-	    title: '供应链'
+	    title: '安厨供应链'
 	  }
 	}
 </script>

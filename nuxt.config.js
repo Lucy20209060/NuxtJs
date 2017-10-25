@@ -3,12 +3,12 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: '安厨',
+    title: '安厨官网-县域农业电商公共服务专家,农产品上行,优选农产品采购批发',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'keywords', content: '安厨,供应链,微店,县域特色,农产品,价格公道,品质优选,生鲜,粮油,蔬果,批发,采购,一件代发' },
-      { hid: 'description', name: 'description', content: '安厨是一家专注于农业电商领域的互联网科技公司，潜心致力于解决县域农产品上行难题，不遗余力推进现代农业发展；提供优质农产品，倡导优质生活；上安厨，吃点好的'}
+      { name: 'keywords', content: '农产品上行,农业电商,安厨微店,安厨供应链,农产品配送,县域农业电商公共服务,优选,批发,土特产' },
+      { hid: 'description', name: 'description', content: '安厨是一家专注于农业电商领域的互联网科技公司，公司秉承“安全S 优质Q 特色F 生态E”的核心理念，潜心致力于解决县域农产品上行难题，不遗余力推进现代农业发展。'}
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
