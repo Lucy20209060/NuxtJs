@@ -33,18 +33,33 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    vendor: ['axios'],
     /*
     ** Run ESLint on save
     */
-    extend (config, ctx) {
-      if (ctx.dev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
+    // extend (config, ctx) {
+    //   if (ctx.dev && ctx.isClient) {
+    //     config.module.rules.push({
+    //       enforce: 'pre',
+    //       test: /\.(js|vue)$/,
+    //       loader: 'eslint-loader',
+    //       exclude: /(node_modules)/
+    //     })
+    //   }
+    // }
+  },
+  // plugins: ['~plugins/axios'],
+  modules: [
+      '@nuxtjs/axios',
+      '@nuxtjs/proxy'
+  ],
+  proxy: [
+    [
+      '/api.php', 
+      { 
+        target: 'http://b2bapi.anchumall.cc/api.php', // api主机
+        pathRewrite: { '^/api.php' : '/' }
       }
-    }
-  }
+    ]
+  ]
 }

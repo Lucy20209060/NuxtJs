@@ -2,26 +2,19 @@
   <section class="synopsis">
     <div class="text" v-for="(item,index) in text" :key="index">
       <underlineTitle :title="item.title" size="36px" />
-      <p v-for="(items,indexs) in item.p" :key="indexs" v-html="items"></p>
+      <p v-for="(items,indexs) in item.content" :key="indexs" v-html="items"></p>
     </div>
     
     <div class="video">
       <my-video :sources="video.sources" :options="video.options"></my-video>
     </div>
 
-    <!-- <div class="four-modular">
-      <p v-for="(item,index) in fourModular" :key="index">
-        <span>{{item.title}}</span>
-        <i>{{item.text}}</i>
-      </p>
-    </div> -->
-
     <table cellspacing="0" class="four-modular">
       <tbody>
         <tr>
           <td v-for="(item,index) in fourModular" :key="index">
             <span>{{item.title}}</span>
-            <i>{{item.text}}</i>
+            <i>{{item.content}}</i>
           </td>
         </tr>
       </tbody>
@@ -33,19 +26,12 @@
 <script>
   import myVideo from '~/components/video'
   import underlineTitle from '~/components/underlineTitle'
+  import { indexData } from '~/assets/getData'
+  import axios from 'axios'
   export default {
     data () {
       return {
-        text: [
-          {
-            title: '耕者良田 食者心田',
-            p: [
-              '杭州安厨电子商务有限公司，创立于2013年，是一家专注于农业电商领域的互联网科技公司，潜心致力于解决县域农产品上行难题，不遗余力推进现在农业发展，与此同时，为广大消费者推荐和严选优质农产品。',
-              '经过4年时间的发展与积累，安厨现有员工一百三十余人，资产规模超十亿元。目前安厨旗下拥有两大核心电商平台安厨微店和安厨供应链，以及近20个业务子公司，业务领域涵盖县域农业电商服务、农业电商培训、电商（物流）产业园、现代农业基地等各大板块。公司通过了ISO9001:2015质量管理体系认证，取得农业电商实用新型和外观专利17项，并和中国农科院共同制定和发布了生鲜农产品电商流通标准。',
-              '“上安厨，吃点好的！ ”。<br>公司秉承“安全S  优质Q  特色F 生态E”的核心理念，倾力把美食从乡间地头搬到城市餐厅。安厨提供优质农产品，倡导优质生活。'
-            ]
-          }
-        ],
+        text: [],
         video: {
           sources: [{
             src: 'http://vjs.zencdn.net/v/oceans.mp4',
@@ -57,29 +43,45 @@
             poster: 'http://covteam.u.qiniudn.com/poster.png'
           }
         },
-        fourModular: [
-          {
-            title: '理念',
-            text: '安全S 优质Q 特色F 生态E'
-          },
-          {
-            title: '愿景',
-            text: '成为做专业的农业电商公司'
-          },
-          {
-            title: '使命',
-            text: '让农村富起来 让农民笑起来'
-          },
-          {
-            title: '价值观',
-            text: '客户第一 拥抱变化 团队协作 担当 激情 敬业'
-          }
-        ]
+        fourModular: []
       }
     },
+    // async asyncData ({ params }) {
+    //   console.log(111111)
+    //   let data = await axios.get('/api.php?s=api/index/category_products')
+
+    //   let [getlist, getlevel1] = await Promise.all([
+    //     axios.get('/api.php?s=api/site/getlist'),
+    //     axios.get('/api.php?s=api/category/getlevel1')
+    //   ])
+
+    //   return {
+    //     dataArr: data.data
+    //     // getlist,
+    //     // getlevel1
+    //   }
+    // },
     components: {
       myVideo,
       underlineTitle
+    },
+    created () {
+      const data = indexData()
+      this.text = data.introduce
+      this.fourModular = data.keyPoints
+      // this.getlist()
+    },
+    methods: {
+      async getlist () {
+        let data = await axios.get('/api.php?s=api/index/category_products')
+        console.log('getlist', data)
+        console.log(11111)
+      },
+      async getlevel1 () {
+        let data = await axios.get('/api.php?s=api/category/getlevel1')
+        console.log('getlevel1', data)
+        console.log(2222)
+      }
     }
   }
 </script>
