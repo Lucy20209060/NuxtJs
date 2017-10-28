@@ -57,8 +57,8 @@
 	  head: {
 	    title: '精雕细琢'
 	  },
-		data () {
-			return {
+  	data () {
+      return {
         elaborate: {}
       }
 		},
@@ -69,7 +69,6 @@
 	  created () {
 	    const data = elaborateData()
 	    this.elaborate = data
-	    console.log(this.elaborate)
 	  }
 	}
 </script>

@@ -82,5 +82,22 @@
 				"img":"elaborate2.png"
 			}
 		]
+	},
+
+	"story":{
+		"banner":[
+			{
+				"img":"elaborate1.png"
+			},
+			{
+				"img":"elaborate2.png"
+			},
+			{
+				"img":"elaborate3.png"
+			},
+			{
+				"img":"elaborate4.png"
+			}
+		]
 	}
 }

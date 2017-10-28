@@ -1,24 +1,48 @@
 <template>
-    <div>
-      安厨故事
-      <i>aaaaa</i>
+    <div class="story-wrap">
+      <Banner :images="imgArr" :loop="true" time="3000" />
     </div>
 </template>
 
 <script>
+	import Banner from '~/components/imgBanner'
+	import { storyData } from '~/assets/getData'
 	export default {
 	  head: {
 	    title: '安厨故事'
-	  }
+	  },
+	  components: {
+      Banner
+    },
+    data () {
+	    return {
+	      imgArr:[
+	      	{
+	      		img:'elaborate1.png'
+	      	},
+	      	{
+	      		img:'elaborate2.png'
+	      	},
+	      	{
+	      		img:'elaborate3.png'
+	      	}
+	      ]
+	    }
+	  },
+	  created () {
+	  	const data = storyData()
+	  	this.imgArr = data.banner
+	  },
 	}
 </script>
 
 <style lang="scss" scoped>
-	div{
-		color: red;
-		i{
-			color: #333;
-			font-size: 40px;
+	$class-pre:'story';
+	.#{$class-pre}{
+		&-wrap{
+			width: 100%;
+			height: 500px;
+
 		}
 	}
 </style>

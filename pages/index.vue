@@ -69,7 +69,6 @@
       const data = indexData()
       this.text = data.introduce
       this.fourModular = data.keyPoints
-      // this.getlist()
     },
     methods: {
       async getlist () {

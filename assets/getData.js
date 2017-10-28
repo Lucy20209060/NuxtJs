@@ -7,3 +7,7 @@ export const indexData = () => {
 export const elaborateData = () => {
   return data.elaborate
 }
+
+export const storyData = () => {
+	return data.story
+}
