@@ -1,5 +1,5 @@
 <template>
-  <section class="footer">
+  <section class="footer" v-if="currentRoute != 'anchu-story-storyDetail-id'">
     <div class="footer-center">
     	<p class="footer-logo">
     		<img src="~/static/img/logo2.png">
@@ -86,8 +86,13 @@
             code: acweixin
           }
         ],
-        imgSign: -1
+        imgSign: -1,
+        currentRoute:''
       }
+    },
+    watch: {
+      // 如果路由有变化，会再次执行该方法
+      '$route': 'routeChange'
     },
     methods: {
       // 二维码滑过
@@ -97,7 +102,11 @@
       // 二维码滑出
       qrCodeOut (index) {
         this.imgSign = -1
-      }
+      },
+      routeChange () {
+        this.currentRoute = this.$router.currentRoute.name
+        console.log(this.$router.currentRoute.name)
+       }
     }
   }
 </script>

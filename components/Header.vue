@@ -59,7 +59,7 @@
                 link: '/anchu/idea'
               },
               {
-                title: '安厨事纪',
+                title: '安厨事记',
                 link: '/anchu/event'
               },
               {

@@ -61,4 +61,7 @@ export default {
   color: #fff;
   background-color: #35495e;
 }*/
+.app,#__nuxt{
+  height: 100%;
+}
 </style>

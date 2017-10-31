@@ -29,6 +29,7 @@ module.exports = {
   loading: {
     color:'#129E83'
   },
+  // plugins: ['~plugins/echarts'],
   /*
   ** Build configuration
   */
@@ -48,7 +49,6 @@ module.exports = {
     //   }
     // }
   },
-  // plugins: ['~plugins/axios'],
   modules: [
       '@nuxtjs/axios',
       '@nuxtjs/proxy'
