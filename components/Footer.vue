@@ -94,6 +94,9 @@
       // 如果路由有变化，会再次执行该方法
       '$route': 'routeChange'
     },
+    created () {
+      this.routeChange()
+    },
     methods: {
       // 二维码滑过
       qrCodeOver (index) {
@@ -103,6 +106,7 @@
       qrCodeOut (index) {
         this.imgSign = -1
       },
+      // 路由变化
       routeChange () {
         this.currentRoute = this.$router.currentRoute.name
         console.log(this.$router.currentRoute.name)

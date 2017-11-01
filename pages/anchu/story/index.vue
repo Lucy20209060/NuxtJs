@@ -4,7 +4,7 @@
       	<Banner :images="story.banner" :loop="true" time="3000" />
     	</div>
 
-      <div class="story-list">
+      <div class="story-list" id="list">
       	<nuxt-link 
 	      	tag="dl" 
 	      	v-for="(item,index) in story.storyList" 
@@ -29,7 +29,7 @@
       </div>
 			
 			<!-- 农民有话说 -->
-      <dl class="story-comment">
+      <dl id="comment" class="story-comment">
       	<dt>{{story.comment.title}}</dt>
       	<dd v-for="(item,index) in story.comment.content" :key="index">
       		<span>
@@ -41,7 +41,7 @@
       		</p>
       	</dd>
       </dl>
-
+			
     </div>
 </template>
 
@@ -64,7 +64,6 @@
 	  created () {
 	  	const data = storyData()
 	  	this.story = data
-	  	console.log(data)
 	  }
 	}
 </script>
@@ -72,9 +71,6 @@
 <style lang="scss" scoped>
 	$class-pre:'story';
 	.#{$class-pre}{
-		&-wrap{
-
-		}
 		&-banner{
 			width: 100%;
 			height: 500px;

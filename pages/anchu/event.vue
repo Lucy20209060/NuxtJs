@@ -31,7 +31,7 @@
       	</dl>
 
 				<!-- 事记楼梯 -->
-				<div class="event-nav" v-if="scrollTop >= 568">
+				<div class="event-nav" v-show="scrollTop >= 568">
 					<p 
 						v-for="(item,index) in event.eventCont" 
 						:key="index"
@@ -46,7 +46,7 @@
 					</p>
 				</div>
 				<!-- 回到顶部 -->
-				<i class="event-top iconfont" @click="goTop(0)"  v-if="scrollTop >= 568">&#xe69c;</i>
+				<i class="event-top iconfont" @click="goTop(0)"  v-show="scrollTop >= 568">&#xe6a6;</i>
 
       </div>
 
@@ -257,10 +257,12 @@
 				border-top: 1px solid #fff;
 				height: 30px;
 				overflow: hidden;
-				transition: all .2s;
+				transition: all .1s;
 				i{
 					display: block;
 					font-size: 22px;
+					font-family: "Dense-Regular";
+					line-height: 32px;
 				}
 				em{
 					display: block;
@@ -304,6 +306,7 @@
 			cursor: pointer;
 			text-align: center;
 			line-height: 40px;
+			transform:rotate(-90deg);
 		}
 	}
 </style>

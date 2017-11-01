@@ -1,5 +1,10 @@
 <template>
-  <section class="header">
+  <section 
+    class="header"
+    :style="{
+      borderBottom: bottom
+    }"
+  >
     <div class="header-center">
     
       <nuxt-link tag="h2" to="/" class="logo">
@@ -173,11 +178,13 @@
         pagePath: '',
         show: false,
         navSign: 0,
-        navOverSign: -1 // 滑过标志
+        navOverSign: -1, // 滑过标志
+        bottom:0
       }
     },
     created () {
       this.routeChange()
+      
     },
     // mounted () {
     // },
@@ -188,6 +195,9 @@
     methods: {
       routeChange () {
         const currentRoute = this.$router.currentRoute.name
+
+        // 安厨故事详情页面 Header无底部border
+        this.bottom = currentRoute != 'anchu-story-storyDetail-id' ? '1px solid #E5E5E5' : 0
         // let pathSign
         if (currentRoute.indexOf('index') !== -1) {
           this.navSign = 0
@@ -237,7 +247,7 @@
   .header{
     width: 100%;
     padding-bottom: 8px;
-    border-bottom: 1px solid #E5E5E5;
+    box-sizing:border-box;
   }
   .header-center{
     width: 1200px;

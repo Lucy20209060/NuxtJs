@@ -14,7 +14,7 @@ h1,h2,h3,h4,h5,h6{
 	font-weight:100;
 }
 body{ 
-	font-family:"PingFangSC-Medium";
+	font-family:"Microsoft YaHei", "PingFangSC-Medium";
 	font-size: 16px;
 	color:#375D77;
 	background: #fff;
@@ -43,8 +43,14 @@ img{
 }
 
 .page-enter-active, .page-leave-active {
-  transition: opacity .5s;
+	transition: opacity .5s;
 }
 .page-enter, .page-leave-active {
-  opacity: 0;
+	opacity: 0;
+}
+
+/*安厨事记 数字 使用字体*/
+@font-face {
+	font-family: "Dense-Regular";
+	src: url('./font/Dense-Regular.otf');
 }

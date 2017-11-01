@@ -26,6 +26,7 @@
       	<div class="storage-table-wrap">
 	      	<underlineTitle :title="storage[1].title" size="24px" />
 	      	<p class="storage-text">{{storage[1].text}}</p>
+	      	<img :src="require(`~\/static\/img\/storage\/${storage[1].img}`)">
       	</div>
       </div>
 
@@ -142,6 +143,9 @@
 					clear:both;
 					overflow:hidden;
 					visibility:hidden;
+				}
+				img{
+					margin-top: 26px;
 				}
 			}
     }

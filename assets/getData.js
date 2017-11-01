@@ -15,6 +15,10 @@ export const eventData = () => {			// 安厨事记
 export const storyData = () => {			// 安厨故事
 	return data.story
 }
+export const storyList = () => {			// 安厨故事详情
+	return data.story.storyList
+	// console.log(data.story.storyList)
+}
 
 /*
 	安厨严选
