@@ -191,9 +191,9 @@
       		width: calc(100% - 60px);
       		padding-left: 20px;
       		box-sizing:border-box;
+					font-size: 14px;
       		i{
 						display: block;
-						font-size: 14px;
 						color: #375D77;
 						padding-bottom: 10px;
       		}

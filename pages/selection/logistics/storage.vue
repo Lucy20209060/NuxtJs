@@ -90,6 +90,7 @@
     	font-size: 14px;
     }
     &-explain{
+    	padding-top: 20px;
     	&:after{
 				content:".";
 				display:block;
@@ -100,12 +101,20 @@
 			}
     	dl{
     		float: left;
+    		cursor: pointer;
     		width: 20%;
     		height:300px;
     		padding: 20px;
     		background: #FFFFFF;
-				box-shadow: 0 0 8px 0 rgba(217,217,217,0.50);
+				box-shadow: 0 0 8px 0 rgba(217,217,217,0.5);
     		box-sizing:border-box;
+
+    		transform:translateY(0);
+	      transition: transform .3s;
+	      &:hover{
+	        transform:translateY(-5px);
+	      }
+
 	    	dt:nth-child(1){
 					color: #129E83;
 					padding: 15px 0 17px;
