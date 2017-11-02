@@ -1,4 +1,5 @@
 module.exports = {
+  cache: true,
   /*
   ** Headers of the page
   */
@@ -34,7 +35,6 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: ['axios'],
     /*
     ** Run ESLint on save
     */
@@ -49,17 +49,12 @@ module.exports = {
     //   }
     // }
   },
-  modules: [
-      '@nuxtjs/axios',
-      '@nuxtjs/proxy'
-  ],
-  proxy: [
-    [
-      '/api.php', 
-      { 
-        target: 'http://b2bapi.anchumall.cc/api.php', // api主机
-        pathRewrite: { '^/api.php' : '/' }
-      }
+  generate: {
+    routes: [
+      '/anchu/story/storyDetail/1',
+      '/anchu/story/storyDetail/2',
+      '/anchu/story/storyDetail/3',
+      '/anchu/story/storyDetail/4'
     ]
-  ]
+  }
 }

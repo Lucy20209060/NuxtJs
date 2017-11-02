@@ -27,7 +27,6 @@
   import myVideo from '~/components/video'
   import underlineTitle from '~/components/underlineTitle'
   import { indexData } from '~/assets/getData'
-  import axios from 'axios'
   export default {
     data () {
       return {
@@ -46,21 +45,6 @@
         fourModular: []
       }
     },
-    // async asyncData ({ params }) {
-    //   console.log(111111)
-    //   let data = await axios.get('/api.php?s=api/index/category_products')
-
-    //   let [getlist, getlevel1] = await Promise.all([
-    //     axios.get('/api.php?s=api/site/getlist'),
-    //     axios.get('/api.php?s=api/category/getlevel1')
-    //   ])
-
-    //   return {
-    //     dataArr: data.data
-    //     // getlist,
-    //     // getlevel1
-    //   }
-    // },
     components: {
       myVideo,
       underlineTitle
@@ -69,18 +53,6 @@
       const data = indexData()
       this.text = data.introduce
       this.fourModular = data.keyPoints
-    },
-    methods: {
-      async getlist () {
-        let data = await axios.get('/api.php?s=api/index/category_products')
-        console.log('getlist', data)
-        console.log(11111)
-      },
-      async getlevel1 () {
-        let data = await axios.get('/api.php?s=api/category/getlevel1')
-        console.log('getlevel1', data)
-        console.log(2222)
-      }
     }
   }
 </script>
