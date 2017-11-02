@@ -2,23 +2,23 @@
   <section class="footer" v-if="currentRoute != 'anchu-story-storyDetail-id'">
     <div class="footer-center">
     	<p class="footer-logo">
-    		<img src="~/static/img/logo2.png">
+        <img :src="require(`~\/static\/img\/${footerData.logo}`)">
     	</p>
 
     	<dl class="footer-contact">
-    		<dt>联系我们</dt>
-    		<dd v-for="(item,index) in contact" key="index">
-    			<span>{{item.address}}</span>
+    		<dt>{{footerData.contact.title}}</dt>
+    		<dd v-for="(item,index) in footerData.contact.address" key="index">
+    			<span>{{item.name}}</span>
     			<i class="iconfont">&#xe69f;</i>
     		</dd>
     	</dl>
       
       <div class="qrCode">
 
-        <figure v-for="(item,index) in qrCode" :key="index" @mouseover="qrCodeOver(index)" @mouseout="qrCodeOut(index)">
+        <figure v-for="(item,index) in footerData.qrCode" :key="index" @mouseover="qrCodeOver(index)" @mouseout="qrCodeOut(index)">
           <figcaption>{{item.title}}</figcaption>
           <img 
-            :src="item.code" 
+            :src="require(`~\/static\/img\/qrCode\/${item.code}`)"
             :class="[
               (index != imgSign) && (imgSign != -1) ? 'imgFilter' : '',
               index == imgSign ? 'imgScale' : ''
@@ -34,58 +34,11 @@
 </template>
 
 <script>
-  import anchugyl from '~/static/img/qrCode/anchugyl.jpg'
-  import anchuwd from '~/static/img/qrCode/anchuwd.jpg'
-  import acweibo from '~/static/img/qrCode/acweibo.png'
-  import acweixin from '~/static/img/qrCode/acweixin.jpg'
-
+  import { footerData } from '~/assets/getData'
   export default {
     data () {
       return {
-        contact: [
-          {
-            address: '安厨总部'
-          },
-          {
-            address: '安厨漾濞站'
-          },
-          {
-            address: '安厨桐庐站'
-          },
-          {
-            address: '安厨榆树站'
-          },
-          {
-            address: '安厨临安站'
-          },
-          {
-            address: '安厨建德站'
-          },
-          {
-            address: '安厨富阳站'
-          },
-          {
-            address: '安厨淳安站'
-          }
-        ],
-        qrCode: [
-          {
-            title: '安厨供应链',
-            code: anchugyl
-          },
-          {
-            title: '安厨微店官方号',
-            code: anchuwd
-          },
-          {
-            title: '安厨官微',
-            code: acweibo
-          },
-          {
-            title: '安厨公众号',
-            code: acweixin
-          }
-        ],
+        footerData: {},
         imgSign: -1,
         currentRoute:''
       }
@@ -95,6 +48,7 @@
       '$route': 'routeChange'
     },
     created () {
+      this.footerData = footerData()
       this.routeChange()
     },
     methods: {
@@ -109,7 +63,6 @@
       // 路由变化
       routeChange () {
         this.currentRoute = this.$router.currentRoute.name
-        console.log(this.$router.currentRoute.name)
        }
     }
   }

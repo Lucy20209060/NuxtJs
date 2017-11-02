@@ -34,10 +34,8 @@
 							<img v-if="item.type=='image'" :src="require(`~\/static\/img\/elaborate\/${item.link}`)">
 
 						</div>
-						
-						<!-- 左右按钮 -->
-						<i class="left iconfont icon-zuojiantou" @click="leftTap"></i>
-						<i class="right iconfont icon-youjiantou" @click="rightTap"></i>
+						<i :class="['left','iconfont','icon-zuojiantou',footerSign ? 'btn-active' : '']" @click="leftTap"></i>
+						<i :class="['right','iconfont','icon-youjiantou',footerSign ? 'btn-active' : '']" @click="rightTap"></i>
 					</div>
 				</div>
 				<dl class="storyDetail-banner-text">
@@ -46,16 +44,10 @@
 					<dd class="text">{{detail.detail.describe}}</dd>
 				</dl>
 			</div>
-
-			<div class="storyDetail-footer" @mouseout="footerOut">
+			
+			<!-- 底部 -->
+			<div class="storyDetail-footer" @mouseleave="footerLeave">
 				<div class="footer">
-					<span>
-						<em @mouseover="footerOver">
-							<i>Copyright © 1998 - 2016 Tencent. All Rights Reserved</i>
-							<i>关于安厨</i>
-						</em>
-					</span>
-
 					<dl
 						:class="[
 							footerSign ? 'footer-active' : ''
@@ -76,11 +68,39 @@
 								@click="footerNavTap(index)"
 							></em>
 						</dt>
-						<dd><img src="~/static/img/logo2.png"></dd>
-						<dd></dd>
-						<dd></dd>
-						<dd></dd>
+						<!-- logo -->
+						<dd class="logo">
+							<img :src="require(`~\/static\/img\/${footerData.logo}`)">
+						</dd>
+						<!-- 联系我们 -->
+						<dd class="link">
+							<i>{{footerData.contact.title}}</i>
+							<span v-for="(item,index) in footerData.contact.address" :key="index">
+								<em>{{item.name}}</em>
+								<i class="iconfont">&#xe69f;</i>
+							</span>
+
+						</dd>
+						<!-- 二维码 -->
+						<dd class="qrcode">
+							<p v-for="(item,index) in footerData.qrCode" :key="index">
+								<i>{{item.title}}</i>
+								<em><img :src="require(`~\/static\/img\/qrCode\/${item.code}`)"></em>
+							</p>
+						</dd>
 					</dl>
+
+					<span 
+						:class="[
+								footerSign ? 'footer-copyright-active' : ''
+						]"
+					>
+						<em @mouseover="footerOver">
+							<i>Copyright © 1998 - 2016 Tencent. All Rights Reserved</i>
+							<i>关于安厨</i>
+						</em>
+					</span>
+
 				</div>
 			</div>
 
@@ -88,15 +108,17 @@
 </template>
 
 <script>
-	import { storyList } from '~/assets/getData'
+	import { storyList,footerData } from '~/assets/getData'
 	export default {
 	  head: {
 	    title: '安厨故事'
 	  },
 	  data () {
       return {
+        detail: {}, 											// 安厨故事详情
+        footerData: {}, 									// footer内容
+
         storyId: this.$route.params.id, 	// 第几个故事 
-        detail: {},
         imageId: 0, 											// 轮播到第几张图片 从0开始
         footerSign: false
       }
@@ -119,7 +141,7 @@
 	  created () {
 	  	const data = storyList()
 	  	this.detail = data[this.storyId - 1]
-	    // console.log(detail.detail.source.length)
+	  	this.footerData = footerData()
 	  },
 	  methods: {
 
@@ -144,12 +166,10 @@
     	// 滑过底部
     	footerOver () {
     		this.footerSign = true
-    		console.log(1111)
     	},
     	// 滑出底部
-    	footerOut () {
+    	footerLeave () {
     		this.footerSign = false
-    		console.log(222222222)
     	},
     	footerNavTap (index) {
     		this.imageId = index
@@ -214,10 +234,16 @@
 					height: 100%;
 					overflow: hidden;
 					position: relative;
-					
+
+					.btn-active{
+						top: 40%
+					}
 					i{
 						position: absolute;
+
 						top: 50%;
+						transition: top .6s;
+
 						margin-top: -35px;
 						width: 70px;
 						height: 70px;
@@ -264,7 +290,7 @@
 				background: #fff;
 				float: left;
 				box-sizing:border-box;
-				padding: 25% 26px 0;
+				padding: 18% 26px 0;
 				.title{
 					font-size: 23px;
 					color: #375D77;
@@ -304,12 +330,20 @@
 				text-align: center;
 				height: 100%;
 				cursor: pointer;
-				span{
+
+				.footer-copyright-active{
+					background: #fff;
+				}
+
+				& > span{
 					display: block;
 					position: relative;
 					height: 100%;
 					z-index: 99;
+
 					background: #E5E5E5;
+					transition: background .6s;
+
 					em{
 						font-size: 14px;
 						position: absolute;
@@ -321,13 +355,19 @@
 				    }
 					}
 				}
+				.footer-active{
+					height: 190px;
+					top: -190px;
+				}
 				dl{
 					position: absolute;
-					/*top: -265px;*/
 					top: -10px;
 					background: rgba(255,255,255,0.90);
 					width: 100%;
+
 					height: 10px;
+					transition: all .6s;
+
 					z-index: 9;
 					overflow: hidden;
 					dt{
@@ -351,8 +391,82 @@
 							}
 						}
 					}
+					dd{
+						float: left;
+						padding-top: 30px;
+						height: 100%;
+						box-sizing:border-box;
+					}
+					.logo{
+						margin-left: 17%;
+					}
+					.link{
+						margin-left: 5%;
+						width: 220px;
+						overflow: hidden;
+						& > i{
+							color: #129E83;
+							float: left;
+							width: 100%;
+							text-align: left;
+							padding-bottom: 10px;
+						}
+						span{
+							float: left;
+							color: #129E83;
+							font-size: 14px;
+							width: 50%;
+							text-align: left;
+							line-height: 24px;
+							em{
+								display: inline-block;
+								width: 72%;
+							}
+							i{
+								font-size: 12px;
+							}
+						}
+					}
+					.qrcode{
+						margin-left: 5%;
+						text-align: left;
+						width: 520px;
+						p:last-child{
+							margin-right: 0;
+						}
+						p{
+							display: inline-block;
+							/*margin-right: 12.5%;*/
+							width: 130px;
+							i{
+								display: block;
+								color: #129E83;
+								padding-bottom: 20px;
+							}
+							em{
+								display: block;
+								img{
+									width: 66%;
+									height: auto;
+								}
+							}
+						}
+						
+					}
 				}
 			}
 		}
 	}
+
+	/*媒体查询*/
+  @media screen and (max-width: 1400px) {
+    .storyDetail-banner-text{
+    	padding: 4% 26px 0;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .storyDetail-banner-text{
+    	padding: 0 26px 0;
+    }
+  }
 </style>

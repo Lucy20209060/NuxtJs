@@ -29,3 +29,10 @@ export const elaborateData = () => {		// 精雕细琢
 export const storageData = () => {			// 仓储服务
   return data.storage
 }
+
+/*
+	底部footer
+*/
+export const footerData = () => {
+  return data.footer
+}
