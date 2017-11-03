@@ -1,7 +1,7 @@
 <template>
-    <div>
-      供应链
-    </div>
+  <section class="supply-page_wrap">
+    安厨供应链
+  </section>
 </template>
 
 <script>

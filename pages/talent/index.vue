@@ -1,7 +1,7 @@
 <template>
-    <div>
-      兵强马壮
-    </div>
+  <section class="talent-page_wrap">
+    兵强马壮
+  </section>
 </template>
 
 <script>

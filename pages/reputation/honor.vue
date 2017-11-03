@@ -1,7 +1,7 @@
 <template>
-    <div>
-      获得荣誉
-    </div>
+  <section class="honor-page_wrap">
+    获得荣誉
+  </section>
 </template>
 
 <script>

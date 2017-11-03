@@ -1,5 +1,5 @@
 <template>
-    <div class="logistics-wrap">
+    <div class="logistics-page_wrap">
       <div class="logistics">
       	<fourWorlds title="物流<br>体系" />
       </div>

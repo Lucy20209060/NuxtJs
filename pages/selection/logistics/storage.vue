@@ -1,5 +1,5 @@
 <template>
-    <div class="storage-wrap">
+    <div class="storage-page_wrap">
     	<div class="storage">
       	<fourWorlds :title="storage[0].title" />
       	<p>

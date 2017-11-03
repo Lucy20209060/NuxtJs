@@ -1,7 +1,7 @@
 <template>
-    <div>
-      安厨专利
-    </div>
+  <section class="patent-page_wrap">
+    安厨专利
+  </section>
 </template>
 
 <script>

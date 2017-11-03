@@ -1,7 +1,7 @@
 <template>
-    <div>
-      农业基地
-    </div>
+  <section class="base-page_wrap">
+    农业基地
+  </section>
 </template>
 
 <script>

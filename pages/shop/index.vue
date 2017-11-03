@@ -1,5 +1,5 @@
 <template>
-	<section>
+	<section class="shop-page_wrap">
     <a href="http://wd.hzanchu.com" target="_blank" class="banner">
       <img src="~/static/img/weidian/wd1.png">
     </a>

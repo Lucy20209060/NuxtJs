@@ -1,7 +1,7 @@
 <template>
-    <div>
-      安厨声音
-    </div>
+  <section class="reputation-page_wrap">
+    安厨声音
+  </section>
 </template>
 
 <script>

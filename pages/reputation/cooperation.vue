@@ -1,7 +1,7 @@
 <template>
-    <div>
-      政府合作
-    </div>
+  <section class="cooperation-page_wrap">
+    政府合作
+  </section>
 </template>
 
 <script>

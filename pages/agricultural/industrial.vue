@@ -1,7 +1,7 @@
 <template>
-    <div>
-      电商产业园
-    </div>
+  <section class="industrial-page_wrap">
+    电商产业园
+  </section>
 </template>
 
 <script>

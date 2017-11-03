@@ -76,7 +76,7 @@
 <style lang="scss" scoped>
 	.elaborate-wrap{
 		overflow: hidden;
-		padding-top: 28px;
+		padding-top: 110px;
 	}
 	.elaborate{
 		margin: 38px auto;

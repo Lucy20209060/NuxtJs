@@ -1,7 +1,7 @@
 <template>
-    <div>
-      县域农业电商服务
-    </div>
+  <section class="agricultural-page_wrap">
+    县域农业电商服务
+  </section>
 </template>
 
 <script>

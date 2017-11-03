@@ -1,7 +1,7 @@
 <template>
-    <div>
-      能者来战
-    </div>
+  <section class="join-page_wrap">
+    能者来战
+  </section>
 </template>
 
 <script>

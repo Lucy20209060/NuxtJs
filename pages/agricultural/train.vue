@@ -1,7 +1,7 @@
 <template>
-    <div>
-      电商培训
-    </div>
+  <section class="train-page_wrap">
+    电商培训
+  </section>
 </template>
 
 <script>
