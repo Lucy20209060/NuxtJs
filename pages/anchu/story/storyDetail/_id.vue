@@ -183,8 +183,8 @@
 	.#{$class-pre}{
 		&-wrap{
 			width: 100%;
-			height: calc(100% - 103px);
-			padding-top: 9px;
+			height: 100%;
+			padding-top: 92px;
 			box-sizing:border-box;
 		}
 		&-banner{

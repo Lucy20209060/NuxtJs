@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="case-page_wrap">
       案例介绍
     </div>
 </template>

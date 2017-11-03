@@ -112,6 +112,9 @@
 <style lang="scss" scoped>
 	$class-pre:'event';
 	.#{$class-pre}{
+		&-wrap{
+			padding-top: 83px;
+		}
 		&-banner{
 			width: 100%;
 			height: 420px;

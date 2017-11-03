@@ -71,7 +71,7 @@
 <style scoped>
   .footer{
   	width: 100%;
-  	height: 810px;
+  	height: 700px;
   }
   .footer-center{
   	width: 1200px;

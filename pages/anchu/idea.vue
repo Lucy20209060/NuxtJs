@@ -35,7 +35,7 @@ export default {
 
 <style scoped>
   .container{
-    padding-top: 28px;
+    padding-top: 110px;
   }
   .text-wrap{
     width: 100%;

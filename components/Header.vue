@@ -4,6 +4,9 @@
     :style="{
       borderBottom: bottom
     }"
+    :class="[
+      scrollTop >= 83 ? 'scrollTop' : ''
+    ]"
   >
     <div class="header-center">
     
@@ -57,7 +60,7 @@
             navList: [
               {
                 title: '安厨简介',
-                link: '/'
+                link: '/anchu/synopsis'
               },
               {
                 title: '安厨理念',
@@ -179,25 +182,36 @@
         show: false,
         navSign: 0,
         navOverSign: -1, // 滑过标志
-        bottom:0
+        bottom: 0,
+        scrollTop: 0
       }
     },
     created () {
       this.routeChange()
       
     },
-    // mounted () {
-    // },
     watch: {
       // 如果路由有变化，会再次执行该方法
       '$route': 'routeChange'
     },
+    mounted(){
+      window.addEventListener('scroll', this.getScroll);
+    },
     methods: {
+      // 获取滚动条高度
+      getScroll () {
+        this.scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop
+      },
+
       routeChange () {
         const currentRoute = this.$router.currentRoute.name
+        // console.log(currentRoute)
 
         // 安厨故事详情页面 Header无底部border
-        this.bottom = currentRoute != 'anchu-story-storyDetail-id' ? '1px solid #E5E5E5' : 0
+        this.bottom = (currentRoute != 'anchu-story-storyDetail-id') && (currentRoute != 'index')
+                    ? '1px solid #E5E5E5' 
+                    : '1px solid transparent'
+        console.log(this.bottom)
         // let pathSign
         if (currentRoute.indexOf('index') !== -1) {
           this.navSign = 0
@@ -248,6 +262,15 @@
     width: 100%;
     padding-bottom: 8px;
     box-sizing:border-box;
+    background: rgba(255,255,255,0.50);
+    position: fixed;
+    top: 0;
+    font-size: 14px;
+    transition: background .2s;
+    z-index: 999;
+  }
+  .scrollTop{
+    background: rgba(255,255,255,1);
   }
   .header-center{
     width: 1200px;
@@ -263,7 +286,7 @@
   }
   .logo{
     float: left;
-    margin-top: 30px;
+    margin-top: 18px;
     cursor: pointer;
   }
   .nav{
@@ -273,29 +296,29 @@
   .nav li{
     float: left;
     padding: 0 10px; 
-    height: 93px;
+    height: 72px;
     margin-left: 20px;
     cursor: pointer;
     position: relative;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid transparent;
   }
   .nav i{
     display: block;
     height: 67%;
     font-size: 12px;
-    padding-top: 28px;
+    padding-top: 14px;
     box-sizing:border-box;
     visibility: hidden;
   }
   .nav span{
     display: block;
     height: 33%;
-    line-height: 30px;
+    line-height: 20px;
 
   }
   .nav-list{
     position: absolute;
-    top: 93px;
+    top: 74px;
     left: 0;
     background: #fff;
     box-shadow: 0 0 4px 0 #d9d9d9;
