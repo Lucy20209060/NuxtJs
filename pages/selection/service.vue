@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <section class="service-page_wrap">
       售后服务
-    </div>
+    </section>
 </template>
 
 <script>

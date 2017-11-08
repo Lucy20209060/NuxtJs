@@ -325,9 +325,12 @@
     opacity: 0;
     z-index: -1;
     transition: opacity 1s;
+    height: 0;
+    overflow: hidden;
   }
   /*鼠标滑过*/
   .nav-over-active{
+    height: auto;
     opacity: 1;
     z-index: 999;
   }
@@ -347,15 +350,6 @@
   }
   .nav-enter-active i{
     visibility: visible;
-  }
-
-  @keyframes mymove{
-    0 {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
   }
   
   /*媒体查询*/

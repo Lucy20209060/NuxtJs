@@ -195,14 +195,15 @@
 				height: 100%;
 				float: left;
 				position: relative;
+
 				.header{
 					position: absolute;
 					top: 0;
 					left: 0;
+					z-index: 99;
 					width:100%;
 					height: 6%;
 					background: rgba(255,255,255,0.80);
-					z-index: 99;
 					text-align: right;
 					a{
 						display: inline-block;

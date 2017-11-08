@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <section class="selection-page_wrap">
       源头把控
-    </div>
+    </section>
 </template>
 
 <script>

@@ -87,6 +87,7 @@
         </div>
     </div>
 </template>
+
 <script>
 const getMousePosition = function (e, type = 'x') {
   if (type === 'x') {
