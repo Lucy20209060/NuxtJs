@@ -58,9 +58,9 @@
 </script>
 
 <style scoped>
-div{
-	position: relative;
-}
+	div{
+		position: relative;
+	}
 	.iconfont{
 		width: 40px;
 		height: 40px;
@@ -75,7 +75,6 @@ div{
 		text-align: center;
 		background: rgba(255,255,255,0.02);
 		border: 2px solid #FFFFFF;
-		
 		margin-left: -20px;
 		margin-top: -20px;
 	}
