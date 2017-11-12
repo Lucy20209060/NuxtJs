@@ -1,12 +1,23 @@
 <template>
-	<div class="carousel_wrap" 
-	:style="{
-		height: itemHeight + 'px',
-		width: itemWidth*2 + 'px'
-	}">
+	<div 
+		class="carousel_wrap" 
+		:style="{
+			height: itemHeight + 'px',
+			width: itemWidth*2 + 'px'
+		}"
+		@mouseover="carouselOver"
+		@mouseout="carouselOut"
+	>
 	  <slot :currentActive="itemActive"></slot>
-	  <i class="iconfont icon-zuojiantou"></i>
-	  <i class="iconfont icon-youjiantou"></i>
+	  <i class="iconfont icon-zuojiantou" @click="leftClick"></i>
+	  <i class="iconfont icon-youjiantou" @click="rightClick"></i>
+	  <!-- <span 
+		  :style="{
+				height: itemHeight + 'px',
+				width: itemWidth/2 + 'px',
+				marginLeft:`-${itemWidth/4}px`,
+			}"
+	  ></span> -->
 	</div>
 </template>
 
@@ -19,30 +30,53 @@
 	  },
     data () {
     	return {
-    		itemLen:0,			// 子元素数组的长度
-    		itemActive:0,		// 当前
-    		timer:null
+    		itemLen: 0,			// 子元素数组的长度
+    		itemActive: 0,		// 当前
+    		timer: null,
+    		clicktag: 0
 
     	}
     },
-    created () {
-    	
-    },
 	  mounted () {
-	  	// console.log(this.$children.length)
-	  	this.itemLen = this.$children.length
-
-	  	if(!this.interval){
-	  		return false
-	  	}
-
-	  	this.timer = setInterval(() =>{
-	  		this.itemActive >= this.itemLen - 1 ? this.itemActive = 0 : this.itemActive ++
-  		},this.interval)
+	  	this.setInterval()
 	  },
     methods: {
-    	leftTap () {
+    	// 左点击
+    	leftClick () {
+    		if (this.clicktag == 0) {
+          this.clicktag = 1;
+          this.itemActive <= 0 ? this.itemActive = this.itemLen - 1 : this.itemActive --
+          setTimeout( () => { 
+           	this.clicktag = 0
+          }, 1000);
+       	}
+    	},
+    	// 右点击
+    	rightClick () {
+    		if (this.clicktag == 0) {
+          this.clicktag = 1;
+          this.itemActive >= this.itemLen - 1 ? this.itemActive = 0 : this.itemActive ++
+          setTimeout( () => { 
+           	this.clicktag = 0
+          }, 1000);
+       	}
+    	},
+    	// 滑入
+    	carouselOver () {
     		clearInterval(this.timer)
+    	},
+    	// 滑出
+    	carouselOut () {
+    		this.setInterval()
+    	},
+    	setInterval () {
+		  	this.itemLen = this.$children.length
+		  	if(!this.interval){
+		  		return false
+		  	}
+		  	this.timer = setInterval(() =>{
+		  		this.itemActive >= this.itemLen - 1 ? this.itemActive = 0 : this.itemActive ++
+	  		},this.interval)
     	}
 	  }
 	}
@@ -53,7 +87,7 @@
 		position: relative;
 		display: inline-block;
 		/*overflow: hidden;*/
-		border:1px solid red;
+		/*border:1px solid red;*/
 	}
 	.iconfont{
 		display: block;
@@ -79,4 +113,10 @@
 	.icon-youjiantou{
 		right: -100px;
 	}
+	/*span{
+		position: absolute;
+		left: 50%;
+		z-index: 0;
+		background: #fff;
+	}*/
 </style>

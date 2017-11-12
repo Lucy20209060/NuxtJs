@@ -25,95 +25,62 @@
 	  },
     methods: {
 	    positionSign () {
-	    	let sign = 'c'
 
-	    	const color = 111 + this.keys*101
+	    	// const color = 111 + this.keys*101
 
 	    	// 数组长度
 	    	const itemLen = this.$parent.$children.length
 
-	    	if(this.keys == this.currentActive){
-	    		sign = 'c'
-	    	}
-	    	else if(this.keys == (this.currentActive+1 == itemLen ? 0 : this.currentActive+1)){
-	    		sign = 'd'
-	    	}
-	    	else if(this.keys == (this.currentActive-1 == -1 ? itemLen-1 : this.currentActive-1)){
-	    		sign = 'b'
-	    	}
-	    	else{
-	    		sign = 'a'
-	    	}
-	    	// else if(this.keys == (this.currentActive+2 >= itemLen ? this.currentActive+2-itemLen : this.currentActive+2)){
-	    	// 	sign = 'a'
-	    	// }
-	    	// else{
-	    	// 	sign = 'a'
-	    	// }
-
-
 	    	// 当前
-	    	if(sign == 'c'){
+	    	if(this.keys == this.currentActive){
 	    		this.currentStyle = {}
 	    	}
-	    	// 右边的
-	    	else if(sign == 'd'){
+	    	// 左侧
+	    	else if(this.keys == (this.currentActive+1 == itemLen ? 0 : this.currentActive+1)){
 	    		this.currentStyle = {
 	    			transform:`translateX(${this.$parent.itemWidth*0.585}px) scale(.83)`,
 		    		msTransform: `translateX(${this.$parent.itemWidth*0.585}px) scale(.83)`,
 				    webkitTransform: `translateX(${this.$parent.itemWidth*0.585}px) scale(.83)`,
-				    zIndex:1
+				    zIndex:1,
+				    opacity:0.63,
+				    boxShadow: `0 0 6px 0 rgba(217,217,217,0.50)`
 	    		}
 	    	}
-	    	// 左边的
-	    	else if(sign == 'b'){
+	    	// 右侧
+	    	else if(this.keys == (this.currentActive-1 == -1 ? itemLen-1 : this.currentActive-1)){
 	    		this.currentStyle = {
 	    			transform:`translateX(-${this.$parent.itemWidth*0.585}px) scale(.83)`,
 		    		msTransform: `translateX(-${this.$parent.itemWidth*0.585}px) scale(.83)`,
 				    webkitTransform: `translateX(-${this.$parent.itemWidth*0.585}px) scale(.83)`,
-				    zIndex:2
+				    zIndex:2,
+				    opacity:0.63,
+				    boxShadow: `0 0 6px 0 rgba(217,217,217,0.50)`
 	    		}
 	    	}
 	    	// 隐藏部分
-	    	else if(sign == 'a'){
+	    	else{
 	    		this.currentStyle = {
 	    			transform:`translateX(0) scale(.63)`,
 		    		msTransform: `translateX(0) scale(.63)`,
 				    webkitTransform: `translateX(0) scale(.63)`,
-				    zIndex:1
+				    zIndex:0
 	    		}
 	    	}
-	    	// // 右边的 隐藏部分
-	    	// else if(sign == 'e'){
-	    	// 	this.currentStyle = {
-	    	// 		transform:`translateX(${this.$parent.itemWidth*1.415}px) scale(.63)`,
-		    // 		msTransform: `translateX(${this.$parent.itemWidth*1.415}px) scale(.63)`,
-				  //   webkitTransform: `translateX(${this.$parent.itemWidth*1.415}px) scale(.63)`,
-				  //   zIndex:1
-	    	// 	}
-	    	// }
 
+	    	this.itemStyle =this.merge({
+	    		width: this.$parent.itemWidth +'px',
+	    		height:this.$parent.itemHeight +'px',
+	    		marginLeft:`-${this.$parent.itemWidth/2}px`,
+	    		// backgroundColor:`#${color}`,
 
-    	this.itemStyle =this.merge({
-    		width: this.$parent.itemWidth +'px',
-    		height:this.$parent.itemHeight +'px',
-    		marginLeft:`-${this.$parent.itemWidth/2}px`,
-    		backgroundColor:`#${color}`,
-
-    		transform:`translateX(0) scale(1)`,
-    		msTransform: `translateX(0) scale(1)`,
-		    webkitTransform: `translateX(0) scale(1)`,
-		    zIndex:3,
-		    transition: `all 1s`
-    	},this.currentStyle)
-
-
-
-
-
-
-
-
+	    		transform:`translateX(0) scale(1)`,
+	    		msTransform: `translateX(0) scale(1)`,
+			    webkitTransform: `translateX(0) scale(1)`,
+			    zIndex:3,
+			    opacity:1,
+			    boxShadow: `0 0 8px 0 rgba(217,217,217,0.50)`,
+			    transition: `all 1s`
+	    	},this.currentStyle)
 	    },
 	    // 合并对象
 	    merge (obj1,obj2) {
@@ -133,8 +100,8 @@
 		display: inline-block;
 		position: absolute;
 		left: 50%;
-	}
-	.currentActive{
-
+		background: #FFFFFF;
+		box-shadow: 0 0 8px 0 rgba(217,217,217,0.50);
+		box-sizing:border-box;
 	}
 </style>

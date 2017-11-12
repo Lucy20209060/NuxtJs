@@ -72,6 +72,10 @@
   .footer{
   	width: 100%;
   	height: 700px;
+    user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
   }
   .footer-center{
   	width: 1200px;
