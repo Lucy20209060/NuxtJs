@@ -211,7 +211,7 @@
         this.bottom = (currentRoute != 'anchu-story-storyDetail-id') && (currentRoute != 'index')
                     ? '1px solid #E5E5E5' 
                     : '1px solid transparent'
-        console.log(this.bottom)
+        // console.log(this.bottom)
         // let pathSign
         if (currentRoute.indexOf('index') !== -1) {
           this.navSign = 0
