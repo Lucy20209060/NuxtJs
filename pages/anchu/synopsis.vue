@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import vi from '~/components/v'
+// import vi from '~/components/v'
   import myVideo from '~/components/video'
   import underlineTitle from '~/components/underlineTitle'
   import { synopsisData } from '~/assets/getData'
@@ -63,7 +63,7 @@ import vi from '~/components/v'
     components: {
       myVideo,
       underlineTitle,
-      vi
+      // vi
     },
     created () {
       const data = synopsisData()

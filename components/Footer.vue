@@ -9,7 +9,7 @@
     		<dt>{{footerData.contact.title}}</dt>
     		<dd v-for="(item,index) in footerData.contact.address" key="index">
     			<span>{{item.name}}</span>
-    			<i class="iconfont">&#xe69f;</i>
+    			<!-- <i class="iconfont">&#xe69f;</i> -->
     		</dd>
     	</dl>
       

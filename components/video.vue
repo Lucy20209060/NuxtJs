@@ -236,13 +236,12 @@ export default {
       this.state.contrlShow = !this.state.contrlShow
     },
     getTime () {
-      this.$video.addEventListener('durationchange', (e) => {
-        // console.log(e)
-      })
-      this.$video.addEventListener('progress', (e) => {
-        // console.log(this.$video.buffered)
-        this.video.loaded = (-1 + (this.$video.buffered.end(0) / this.$video.duration)) * 100
-      })
+      // this.$video.addEventListener('durationchange', (e) => {
+      //   // console.log(e)
+      // })
+      // this.$video.addEventListener('progress', (e) => {
+      //   // this.video.loaded = (-1 + (this.$video.buffered.end(0) / this.$video.duration)) * 100
+      // })
       this.video.len = this.$video.duration
     },
     setVideoByTime (percent) {
@@ -353,9 +352,13 @@ export default {
 </script>
 
 <style>
+#app,.container{
+  height: 100%;
+}
 .__cov-video-container {
     position: relative;
     width: 100%;
+    height: 100%;
     background-color: #000;
 }
 .__cov-video {

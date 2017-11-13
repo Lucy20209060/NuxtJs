@@ -32,6 +32,10 @@
 							]"
 						>
 							<img v-if="item.type=='image'" :src="require(`~\/static\/img\/elaborate\/${item.link}`)">
+							
+							<!-- <vi v-if="item.type=='video'" :sources="item.link"></vi> -->
+
+							<myVideo v-if="item.type=='video'" ref="myvideo" :sources="item.video.sources" :options="item.video.options"></myVideo>
 
 						</div>
 						<i :class="['left','iconfont','icon-zuojiantou',footerSign ? 'btn-active' : '']" @click="leftTap"></i>
@@ -41,7 +45,7 @@
 				<dl class="storyDetail-banner-text">
 					<dt class="title" v-html="detail.detail.title"></dt>
 					<dd class="number">{{`${imageId + 1}/${detail.detail.source.length}`}}</dd>
-					<dd class="text">{{detail.detail.describe}}</dd>
+					<dd class="text" v-html="detail.detail.source[imageId].describe"></dd>
 				</dl>
 			</div>
 			
@@ -77,7 +81,7 @@
 							<i>{{footerData.contact.title}}</i>
 							<span v-for="(item,index) in footerData.contact.address" :key="index">
 								<em>{{item.name}}</em>
-								<i class="iconfont">&#xe69f;</i>
+								<!-- <i class="iconfont">&#xe69f;</i> -->
 							</span>
 
 						</dd>
@@ -109,6 +113,7 @@
 
 <script>
 	import { storyList,footerData } from '~/assets/getData'
+	import myVideo from '~/components/video'
 	export default {
 	  head: {
 	    title: '安厨故事'
@@ -117,12 +122,25 @@
       return {
         detail: {}, 											// 安厨故事详情
         footerData: {}, 									// footer内容
-
         storyId: this.$route.params.id, 	// 第几个故事 
         imageId: 0, 											// 轮播到第几张图片 从0开始
-        footerSign: false
+        footerSign: false,
+        video: {
+          sources: [{
+            src: 'http://static.smartisanos.cn/common/video/video-jgpro.mp4',
+            type: 'video/mp4'
+          }],
+          options: {
+            autoplay: false,
+            volume: 0.6,
+            poster: 'http://covteam.u.qiniudn.com/poster.png'
+          }
+        }
       }
 		},
+		components: {
+      myVideo
+    },
 		validate ({ params }) {
 		  return /^\d+$/.test(params.id)
 		},
@@ -142,6 +160,9 @@
 	  	const data = storyList()
 	  	this.detail = data[this.storyId - 1]
 	  	this.footerData = footerData()
+	  },
+	  watch: {
+	  	'imageId':'pauseVideo'
 	  },
 	  methods: {
 
@@ -173,6 +194,13 @@
     	},
     	footerNavTap (index) {
     		this.imageId = index
+    	},
+
+    	// 切换时 如果是视频并且正在播放 切换掉后将视频暂停
+    	pauseVideo () {
+    		if(this.$refs.myvideo && this.$refs.myvideo[0].state.playing){
+    			this.$refs.myvideo[0].play()
+    		}
     	}
     }
 	}
@@ -291,7 +319,7 @@
 				background: #fff;
 				float: left;
 				box-sizing:border-box;
-				padding: 18% 26px 0;
+				padding: 2% 20px 0;
 				.title{
 					font-size: 23px;
 					color: #375D77;
@@ -313,12 +341,12 @@
 					font-size: 66px;
 					color: #375D77;
 					line-height: 66px;
-					padding: 30px 0 30px;
+					padding: 20px 0 20px;
 				}
 				.text{
-					font-size: 16px;
+					font-size: 12px;
 					color: #375D77;
-					line-height: 26px;
+					line-height: 20px;
 				}
 			}
 		}
@@ -369,7 +397,7 @@
 					height: 10px;
 					transition: all .6s;
 
-					z-index: 9;
+					z-index: 99;
 					overflow: hidden;
 					dt{
 						float: left;
@@ -460,11 +488,11 @@
 	}
 
 	/*媒体查询*/
-  @media screen and (max-width: 1400px) {
+  /*@media screen and (max-width: 1400px) {
     .storyDetail-banner-text{
     	padding: 4% 26px 0;
     }
-  }
+  }*/
   @media screen and (max-width: 750px) {
     .storyDetail-banner-text{
     	padding: 0 26px 0;

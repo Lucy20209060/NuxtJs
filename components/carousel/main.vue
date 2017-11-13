@@ -37,8 +37,15 @@
 
     	}
     },
+    // created () {
+      
+    // },
 	  mounted () {
+	  	this.itemLen = this.$children.length
 	  	this.setInterval()
+	  },
+	  destroyed () {
+	  	clearInterval(this.timer)
 	  },
     methods: {
     	// 左点击
@@ -69,14 +76,18 @@
     	carouselOut () {
     		this.setInterval()
     	},
+    	// 定时器
     	setInterval () {
-		  	this.itemLen = this.$children.length
+		  	
 		  	if(!this.interval){
 		  		return false
 		  	}
 		  	this.timer = setInterval(() =>{
 		  		this.itemActive >= this.itemLen - 1 ? this.itemActive = 0 : this.itemActive ++
 	  		},this.interval)
+    	},
+    	tapIndex (index) {
+    		this.itemActive = index
     	}
 	  }
 	}
@@ -86,8 +97,6 @@
 	.carousel_wrap{
 		position: relative;
 		display: inline-block;
-		/*overflow: hidden;*/
-		/*border:1px solid red;*/
 	}
 	.iconfont{
 		display: block;
@@ -113,10 +122,4 @@
 	.icon-youjiantou{
 		right: -100px;
 	}
-	/*span{
-		position: absolute;
-		left: 50%;
-		z-index: 0;
-		background: #fff;
-	}*/
 </style>

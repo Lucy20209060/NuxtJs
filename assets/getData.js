@@ -39,6 +39,14 @@ export const storageData = () => {				// 仓储服务
 }
 
 /*
+	求贤通道
+*/
+export const joinData = () => { 				// 能者来战
+  return data.join
+}
+
+
+/*
 	底部footer
 */
 export const footerData = () => {

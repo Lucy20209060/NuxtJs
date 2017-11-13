@@ -2,7 +2,7 @@
     <div class="elaborate-wrap">
       <div class="elaborate" v-for="(item,index) in elaborate.introduce" :key="index">
       	<fourWorlds :title="item.title" />
-      	<span>{{item.content}}</span>
+      	<span v-html="item.content"></span>
       	<p>
       		<img v-for="(items,indexs) in item.images" :key="indexs" :src="require(`~\/static\/img\/elaborate\/${items}`)">
       	</p>
@@ -86,6 +86,7 @@
 	.elaborate span{
 		display: block;
 		font-size: 14px;
+		line-height: 26px;
 	}
 	.elaborate p{
 		padding-top: 36px;

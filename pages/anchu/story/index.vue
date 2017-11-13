@@ -23,7 +23,7 @@
       				<i class="site" :style="{background:item.site.background}">{{item.site.name}}</i>
       				<span>{{item.title}}</span>
       				<em>{{item.time}}</em>
-      				<i class="describe">{{item.describe}}</i>
+      				<i class="describe" v-html="item.describe"></i>
       		</dd>
       	</nuxt-link>
       </div>
@@ -82,6 +82,18 @@
 			width: 1200px;
 			margin: 0 auto;
 			padding: 32px 0 122px;
+			& :nth-child(1) dd{
+				bottom: -95px;
+			}
+			& :nth-child(2) dd{
+				bottom: -95px;
+			}
+			& :nth-child(3) dd{
+				bottom: -74px;
+			}
+			& :nth-child(4) dd{
+				bottom: -116px;
+			}
 			dl{
 				display: inline-block;
 				width: 294px;
@@ -102,14 +114,13 @@
 				&:hover dd{
 					bottom: 0;
 				}
+
 				dd{
 					position: absolute;
 					background: #fff;
 					padding: 0 12px 10px;
 					color: #000000;
 					z-index: 99;
-
-					bottom: -74px;
 					transition: bottom .5s;
 
 					.site{

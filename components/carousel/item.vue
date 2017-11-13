@@ -1,5 +1,5 @@
 <template>
-	<div class="carousel_item_wrap" :style="itemStyle">
+	<div class="carousel_item_wrap" :style="itemStyle" @click="itemClick">
 	  <slot></slot>
 	</div>
 </template>
@@ -24,10 +24,13 @@
 	  	this.positionSign()
 	  },
     methods: {
+    	// 点击某个职位
+    	itemClick () {
+    		this.$parent.tapIndex(this.keys)
+    	},
+
+    	// 初始化
 	    positionSign () {
-
-	    	// const color = 111 + this.keys*101
-
 	    	// 数组长度
 	    	const itemLen = this.$parent.$children.length
 
@@ -71,8 +74,6 @@
 	    		width: this.$parent.itemWidth +'px',
 	    		height:this.$parent.itemHeight +'px',
 	    		marginLeft:`-${this.$parent.itemWidth/2}px`,
-	    		// backgroundColor:`#${color}`,
-
 	    		transform:`translateX(0) scale(1)`,
 	    		msTransform: `translateX(0) scale(1)`,
 			    webkitTransform: `translateX(0) scale(1)`,
@@ -82,6 +83,7 @@
 			    transition: `all 1s`
 	    	},this.currentStyle)
 	    },
+
 	    // 合并对象
 	    merge (obj1,obj2) {
 	    	let [tem1,tem2] = [obj1,obj2];
@@ -103,5 +105,6 @@
 		background: #FFFFFF;
 		box-shadow: 0 0 8px 0 rgba(217,217,217,0.50);
 		box-sizing:border-box;
+		cursor: pointer;
 	}
 </style>

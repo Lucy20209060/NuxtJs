@@ -4,6 +4,10 @@
       	<img :src="require(`~\/static\/img\/elaborate\/${event.banner}`)">
       </div>
 
+      <div class="event-text">
+      	<p v-for="(item,index) in event.text" :key="index">{{item}}</p>
+      </div>
+
       <div class="event-content">
       	<dl 
       		v-for="(item,index) in event.eventCont" 
@@ -125,10 +129,20 @@
 				display: block;
 			}
 		}
+		&-text{
+			width: 1200px;
+			text-align: center;
+			margin: 0 auto;
+			padding: 40px 0 0;
+			font-size: 14px;
+			p{
+				line-height: 26px;
+			}
+		}
 		&-content{
 			width: 1200px;
 			min-height: 500px;
-			margin:110px auto 0;
+			margin:40px auto 0;
 			box-sizing:border-box;
 			padding: 0 120px;
 			position: relative;

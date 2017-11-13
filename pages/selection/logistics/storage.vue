@@ -19,7 +19,7 @@
 	      	</dl>
       	</div>
 
-      	<span>{{storage[0].text[0]}}</span>
+      	<span v-html="storage[0].text[0]"></span>
       </div>
 
       <div class="storage-table">
