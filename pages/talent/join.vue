@@ -90,9 +90,6 @@
       this.activeJob = this.join[0]
       console.log(this.join)     
     },
-    mounted(){
-			
-	  },
     methods: {
     	choiceClass (index) {
       	this.activeJob = this.join[index]

@@ -44,6 +44,18 @@ export const storageData = () => {				// 仓储服务
 export const joinData = () => { 				// 能者来战
   return data.join
 }
+export const talentData = () => { 				// 兵强马壮
+  return data.talent
+}
+
+
+/*
+	驰声走誉
+*/
+export const cooperationData = () => { 				// 政府合作
+  return data.cooperation
+}
+
 
 
 /*

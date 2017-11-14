@@ -63,7 +63,7 @@
       // 路由变化
       routeChange () {
         this.currentRoute = this.$router.currentRoute.name
-       }
+      }
     }
   }
 </script>

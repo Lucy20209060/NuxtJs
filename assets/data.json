@@ -524,6 +524,34 @@
 	],
 
 
+
+
+	"talent":{
+		"photoWall":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+		"leader":[
+			{
+				"portrait":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+				"name":"王晓桢（创始人）",
+				"describe":"花名丰登，10年五百强外企工作背景，4年阿里工作经历。原阿里云布道师，原淘宝特色中国和农资行业负责人，原农村淘宝农产品上行负责人。安厨控股合伙人孙黎明，安厨电商CEO。"
+			},
+			{
+				"portrait":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+				"name":"孙黎明（安厨微店创始人&CEO）",
+				"describe":"花名丰登，10年五百强外企工作背景，4年阿里工作经历。原阿里云布道师，原淘宝特色中国和农资行业负责人，原农村淘宝农产品上行负责人。安厨控股合伙人孙黎明，安厨电商CEO。"
+			},
+			{
+				"portrait":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+				"name":"王晓桢（创始人）",
+				"describe":"花名丰登，10年五百强外企工作背景，4年阿里工作经历。原阿里云布道师，原淘宝特色中国和农资行业负责人，原农村淘宝农产品上行负责人。安厨控股合伙人孙黎明，安厨电商CEO。"
+			},
+			{
+				"portrait":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+				"name":"任一箭（CTO）",
+				"describe":"花名丰登，10年五百强外企工作背景，4年阿里工作经历。原阿里云布道师，原淘宝特色中国和农资行业负责人，原农村淘宝农产品上行负责人。安厨控股合伙人孙黎明，安厨电商CEO。"
+			}
+		]
+	},
+
 	"join":[
 		{
 			"title":{
@@ -1013,6 +1041,157 @@
       	}
       ]
     }
+	],
+
+
+
+	"cooperation":[
+		{
+			"site":{
+				"CHtitle":"桐庐",
+				"ENtitle":"Tonglu"
+			},
+			"image":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+			"news":[
+				{
+					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+				},
+				{
+					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+				},
+				{
+					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+				},
+				{
+					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+				},
+				{
+					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+				},
+				{
+					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+				},
+				{
+					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+				}
+			],
+			"currentNews":{
+				"currentPage":0,
+				"allPage":0,
+				"news":[]
+			}
+		},
+		{
+			"site":{
+				"CHtitle":"淳安",
+				"ENtitle":"Chunan"
+			},
+			"image":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+			"news":[
+				{
+					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+				},
+				{
+					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+				},
+				{
+					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+				}
+			],
+			"currentNews":{
+				"currentPage":0,
+				"allPage":0,
+				"news":[]
+			}
+		},
+		{
+			"site":{
+				"CHtitle":"漾濞",
+				"ENtitle":"YangBi"
+			},
+			"image":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+			"news":[
+				{
+					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+				},
+				{
+					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+				},
+				{
+					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+				},
+				{
+					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+				}
+			],
+			"currentNews":{
+				"currentPage":0,
+				"allPage":0,
+				"news":[]
+			}
+		},
+		{
+			"site":{
+				"CHtitle":"桐庐",
+				"ENtitle":"Tonglu"
+			},
+			"image":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+			"news":[
+				{
+					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+				},
+				{
+					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+				},
+				{
+					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+				},
+				{
+					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+				}
+			],
+			"currentNews":{
+				"currentPage":0,
+				"allPage":0,
+				"news":[]
+			}
+		}
 	],
 
 
