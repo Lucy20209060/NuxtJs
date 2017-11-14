@@ -9,8 +9,8 @@
 		@mouseout="carouselOut"
 	>
 	  <slot :currentActive="itemActive"></slot>
-	  <i class="iconfont icon-zuojiantou" @click="leftClick"></i>
-	  <i class="iconfont icon-youjiantou" @click="rightClick"></i>
+	  <i class="iconfont zuo icon-zuoyou" @click="leftClick"></i>
+	  <i class="iconfont you icon-zuoyou" @click="rightClick"></i>
 	  <!-- <span 
 		  :style="{
 				height: itemHeight + 'px',
@@ -107,7 +107,7 @@
 		margin-top: -40px;
 		text-align: center;
 		line-height: 80px;
-		font-size: 30px;
+		font-size: 50px;
 		cursor: pointer;
 		color: #375D77;
 		opacity: .6;
@@ -116,10 +116,11 @@
 
 		}
 	}
-	.icon-zuojiantou{
+	.zuo{
 		left: -100px;
 	}
-	.icon-youjiantou{
+	.you{
 		right: -100px;
+		transform:rotate(180deg);
 	}
 </style>

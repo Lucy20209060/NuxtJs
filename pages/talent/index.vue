@@ -23,7 +23,7 @@
     </ul>
 
     <div class="talent-text">
-    	<underlineTitle title="加入安厨为改变农村电商而努力"></underlineTitle>
+    	<underlineTitle title="加入安厨为改变农村电商而努力" size="36px"></underlineTitle>
     </div>
 
   </section>
