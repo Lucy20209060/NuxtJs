@@ -1,0 +1,2 @@
+webpackJsonp([23],{"ff+G":function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a=n("n165"),s=n("peob"),r=n("VU/8"),i=r(a.a,s.a,!1,null,null,null);t.default=i.exports},n165:function(e,t,n){"use strict";t.a={head:{title:"电商产业园"}}},peob:function(e,t,n){"use strict";var a=function(){var e=this,t=e.$createElement;return(e._self._c||t)("section",{staticClass:"industrial-page_wrap"},[e._v("\n  电商产业园\n")])},s=[],r={render:a,staticRenderFns:s};t.a=r}});
+//# sourceMappingURL=industrial.feb8310e52022614eadf.js.map

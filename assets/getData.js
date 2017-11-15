@@ -3,7 +3,6 @@ import data from './data.json'
 /*
 	首页
 */
-
 export const indexData = () => {
   return data.index
 }
@@ -25,7 +24,6 @@ export const storyData = () => {				// 安厨故事
 }
 export const storyList = () => {				// 安厨故事详情
 	return data.story.storyList
-	// console.log(data.story.storyList)
 }
 
 /*
@@ -39,6 +37,29 @@ export const storageData = () => {				// 仓储服务
 }
 
 /*
+	安厨供应链
+*/
+/*
+	安厨微店
+*/
+/*
+	驰声走誉
+*/
+export const cooperationData = () => { 				// 政府合作
+  return data.cooperation
+}
+export const reputationData = () => { 				// 安厨声音
+  return data.reputation
+}
+
+/*
+	对农服务
+*/
+export const agriculData = () => { 					// 政府合作
+  return data.agricultural
+}
+
+/*
 	求贤通道
 */
 export const joinData = () => { 				// 能者来战
@@ -46,20 +67,6 @@ export const joinData = () => { 				// 能者来战
 }
 export const talentData = () => { 				// 兵强马壮
   return data.talent
-}
-
-/*
-	驰声走誉
-*/
-export const cooperationData = () => { 				// 政府合作
-  return data.cooperation
-}
-
-/*
-	对农服务
-*/
-export const agriculData = () => { 				// 政府合作
-  return data.agricultural
 }
 
 /*

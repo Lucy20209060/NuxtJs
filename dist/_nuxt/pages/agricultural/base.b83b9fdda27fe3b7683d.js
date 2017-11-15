@@ -1,0 +1,2 @@
+webpackJsonp([25],{"/0Xg":function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a=n("5Suh"),s=n("o2L/"),r=n("VU/8"),u=r(a.a,s.a,!1,null,null,null);t.default=u.exports},"5Suh":function(e,t,n){"use strict";t.a={head:{title:"农业基地"}}},"o2L/":function(e,t,n){"use strict";var a=function(){var e=this,t=e.$createElement;return(e._self._c||t)("section",{staticClass:"base-page_wrap"},[e._v("\n  农业基地\n")])},s=[],r={render:a,staticRenderFns:s};t.a=r}});
+//# sourceMappingURL=base.b83b9fdda27fe3b7683d.js.map

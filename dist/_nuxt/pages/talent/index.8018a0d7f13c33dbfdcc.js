@@ -1,0 +1,2 @@
+webpackJsonp([13],{"6HtY":function(t,e,n){"use strict";var a=function(){var t=this,e=t.$createElement;return(t._self._c||e)("section",{staticClass:"talent-page_wrap"},[t._v("\n  兵强马壮\n")])},s=[],r={render:a,staticRenderFns:s};e.a=r},"jni/":function(t,e,n){"use strict";e.a={head:{title:"兵强马壮"}}},tWF4:function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var a=n("jni/"),s=n("6HtY"),r=n("VU/8"),i=r(a.a,s.a,!1,null,null,null);e.default=i.exports}});
+//# sourceMappingURL=index.8018a0d7f13c33dbfdcc.js.map

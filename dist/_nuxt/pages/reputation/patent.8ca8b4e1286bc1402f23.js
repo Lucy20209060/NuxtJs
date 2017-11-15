@@ -1,0 +1,2 @@
+webpackJsonp([18],{"/Yv5":function(e,t,n){"use strict";t.a={head:{title:"安厨专利"}}},"0k50":function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a=n("/Yv5"),s=n("NOvU"),r=n("VU/8"),c=r(a.a,s.a,!1,null,null,null);t.default=c.exports},NOvU:function(e,t,n){"use strict";var a=function(){var e=this,t=e.$createElement;return(e._self._c||t)("section",{staticClass:"patent-page_wrap"},[e._v("\n  安厨专利\n")])},s=[],r={render:a,staticRenderFns:s};t.a=r}});
+//# sourceMappingURL=patent.8ca8b4e1286bc1402f23.js.map

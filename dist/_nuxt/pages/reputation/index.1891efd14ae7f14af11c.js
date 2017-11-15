@@ -1,0 +1,2 @@
+webpackJsonp([19],{"2bWU":function(e,t,n){"use strict";var a=function(){var e=this,t=e.$createElement;return(e._self._c||t)("section",{staticClass:"reputation-page_wrap"},[e._v("\n  安厨声音\n")])},r=[],s={render:a,staticRenderFns:r};t.a=s},SBtW:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a=n("g7Ki"),r=n("2bWU"),s=n("VU/8"),i=s(a.a,r.a,!1,null,null,null);t.default=i.exports},g7Ki:function(e,t,n){"use strict";t.a={head:{title:"安厨声音"}}}});
+//# sourceMappingURL=index.1891efd14ae7f14af11c.js.map

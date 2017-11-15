@@ -1,0 +1,2 @@
+webpackJsonp([21],{"2zQk":function(e,t,n){"use strict";var a=function(){var e=this,t=e.$createElement;return(e._self._c||t)("section",{staticClass:"cooperation-page_wrap"},[e._v("\n  政府合作\n")])},r=[],s={render:a,staticRenderFns:r};t.a=s},"EXD+":function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a=n("VdWV"),r=n("2zQk"),s=n("VU/8"),c=s(a.a,r.a,!1,null,null,null);t.default=c.exports},VdWV:function(e,t,n){"use strict";t.a={head:{title:"政府合作"}}}});
+//# sourceMappingURL=cooperation.bd1eac46a38f46766f53.js.map

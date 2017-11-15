@@ -2,7 +2,7 @@
   <section class="join-page_wrap">
 		
 		<div class="join-title">
-			<fourWorlds title="能者来战" />
+			<fourWorlds title="能者<br>来战" />
 		</div>
 		
 		<!-- 各部门 -->

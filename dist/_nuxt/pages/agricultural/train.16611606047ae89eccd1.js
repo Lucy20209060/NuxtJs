@@ -1,0 +1,2 @@
+webpackJsonp([22],{"2gP8":function(e,t,a){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=a("caSs"),s=a("aM0/"),r=a("VU/8"),c=r(n.a,s.a,!1,null,null,null);t.default=c.exports},"aM0/":function(e,t,a){"use strict";var n=function(){var e=this,t=e.$createElement;return(e._self._c||t)("section",{staticClass:"train-page_wrap"},[e._v("\n  电商培训\n")])},s=[],r={render:n,staticRenderFns:s};t.a=r},caSs:function(e,t,a){"use strict";t.a={head:{title:"电商培训"}}}});
+//# sourceMappingURL=train.16611606047ae89eccd1.js.map

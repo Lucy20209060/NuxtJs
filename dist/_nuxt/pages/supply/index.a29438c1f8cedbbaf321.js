@@ -1,0 +1,2 @@
+webpackJsonp([14],{OrHP:function(e,t,n){"use strict";var r=function(){var e=this,t=e.$createElement;return(e._self._c||t)("section",{staticClass:"supply-page_wrap"},[e._v("\n  安厨供应链\n")])},s=[],a={render:r,staticRenderFns:s};t.a=a},SDV8:function(e,t,n){"use strict";t.a={head:{title:"安厨供应链"}}},tSrH:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r=n("SDV8"),s=n("OrHP"),a=n("VU/8"),u=a(r.a,s.a,!1,null,null,null);t.default=u.exports}});
+//# sourceMappingURL=index.a29438c1f8cedbbaf321.js.map

@@ -6,19 +6,8 @@
     </div>
     
     <div class="video">
-      <my-video :sources="video.sources" :options="video.options"></my-video>
+      <myVideo :sources="video.sources" :options="video.options" />
     </div>
-
-    <!--  <video id="video" preload="auto" x5-playsinline playsinline webkit-playsinline style="width:200px;height:200px;">
-        <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
-    </video> -->
-
-<!-- <video style="width:100%;height:auto;" controls="controls" loop autoplay="autoplay" name="media">
-  <source :src="video.sources[0].src" type="video/mp4">
-</video> -->
-
-<!-- <vi :sources="video.sources[0].src"></vi> -->
-
 
     <table cellspacing="0" class="four-modular">
       <tbody>
@@ -35,7 +24,6 @@
 </template>
 
 <script>
-// import vi from '~/components/v'
   import myVideo from '~/components/video'
   import underlineTitle from '~/components/underlineTitle'
   import { synopsisData } from '~/assets/getData'
@@ -46,29 +34,19 @@
     data () {
       return {
         text: [],
-        video: {
-          sources: [{
-            src: 'http://static.smartisanos.cn/common/video/video-jgpro.mp4',
-            type: 'video/mp4'
-          }],
-          options: {
-            autoplay: false,
-            volume: 0.6,
-            poster: 'http://covteam.u.qiniudn.com/poster.png'
-          }
-        },
+        video: {},
         fourModular: []
       }
     },
     components: {
       myVideo,
-      underlineTitle,
-      // vi
+      underlineTitle
     },
     created () {
       const data = synopsisData()
       this.text = data.introduce
       this.fourModular = data.keyPoints
+      this.video = data.video
     }
   }
 </script>

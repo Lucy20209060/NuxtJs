@@ -14,11 +14,17 @@
     		</dt>
 
     		<dd>
-    			<p v-for="(news,indexs) in site.currentNews.news" :key="indexs">
+    			<a 
+	    			v-for="(news,indexs) in site.currentNews.news" 
+	    			:key="indexs"
+	    			:href="news.link"
+	    			target="_blank" 
+    			>
     				<img :src="news.img" alt="">
     				<i>{{news.title}}</i>
     				<span>{{news.describe}}</span>
-    			</p>
+    			</a>
+
     			<button 
     				@click="getPageNews(index)"
     				:class="[
@@ -158,7 +164,7 @@
 					box-sizing:border-box;
 					text-align: left;
 					position: relative;
-					p{
+					a{
 						width: calc((100% - 20px)/3);
 						height: 296px;
 						display: inline-block;

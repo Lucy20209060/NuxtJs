@@ -1,0 +1,2 @@
+webpackJsonp([24],{BlGH:function(t,e,n){"use strict";e.a={head:{title:"县域农业电商服务"}}},XAdh:function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var a=n("BlGH"),r=n("tPg6"),l=n("VU/8"),s=l(a.a,r.a,!1,null,null,null);e.default=s.exports},tPg6:function(t,e,n){"use strict";var a=function(){var t=this,e=t.$createElement;return(t._self._c||e)("section",{staticClass:"agricultural-page_wrap"},[t._v("\n  县域农业电商服务\n")])},r=[],l={render:a,staticRenderFns:r};e.a=l}});
+//# sourceMappingURL=index.d6a323ed28bcffb0a618.js.map

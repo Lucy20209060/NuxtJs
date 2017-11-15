@@ -1,0 +1,2 @@
+webpackJsonp([15],{"9cN3":function(e,t,n){"use strict";var a=function(){var e=this,t=e.$createElement;return(e._self._c||t)("section",{staticClass:"service-page_wrap"},[e._v("\n  售后服务\n")])},s=[],c={render:a,staticRenderFns:s};t.a=c},C0aw:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a=n("jDYp"),s=n("9cN3"),c=n("VU/8"),r=c(a.a,s.a,!1,null,null,null);t.default=r.exports},jDYp:function(e,t,n){"use strict";t.a={head:{title:"售后服务"}}}});
+//# sourceMappingURL=service.ca8ccf373cd0d19bf035.js.map

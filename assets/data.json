@@ -17,7 +17,17 @@
 			}
 		],
 
-		"video":{},
+		"video":{
+      "sources": [{
+        "src": "http://static.smartisanos.cn/common/video/video-jgpro.mp4",
+        "type": "video/mp4"
+      }],
+      "options": {
+        "autoplay": false,
+        "volume": 0.6,
+        "poster": "http://covteam.u.qiniudn.com/poster.png"
+      }
+    },
 
 		"keyPoints":[
 			{
@@ -1107,6 +1117,86 @@
 
 
 
+	"reputation":{
+		"information":{
+			"title":"最新资讯",
+			"video":{
+	      "sources": [{
+	        "src": "http://static.smartisanos.cn/common/video/video-jgpro.mp4",
+	        "type": "video/mp4"
+	      }],
+	      "options": {
+	        "autoplay": false,
+	        "volume": 0.6,
+	        "poster": "http://covteam.u.qiniudn.com/poster.png"
+	      }
+	    }
+		},
+		"allNews":{
+			"title":"所有新闻",
+			"content":[
+				{
+					"time":["6月","20","Jun."],
+					"title":"人社部副部长游钧一行莅临安厨电商参观考察人社部副部长游钧一行莅临安厨电商参观",
+					"date":"2017.06.22 15:00",
+					"link":"http://www.baidu.com",
+					"outline":"返乡下乡人员创业创新是大众创业、万众创新工作的重要组成部分，对于发展农村新产业新业态新模式，加快培育农业农村经济发展新动能具有重。主要以坚持实施就业优先战略、支持新就业形态发展、促进以创业带动就业、抓好重点群体就业创业等方面进行落实……"
+				},
+				{
+					"time":["6月","20","Jun."],
+					"title":"人社部副部长游钧一行莅临安厨电商参观考察人社部副部长游钧一行莅临安厨电商参观",
+					"date":"2017.06.22 15:00",
+					"link":"http://www.baidu.com",
+					"outline":"返乡下乡人员创业创新是大众创业、万众创新工作的重要组成部分，对于发展农村新产业新业态新模式，加快培育农业农村经济发展新动能具有重。主要以坚持实施就业优先战略、支持新就业形态发展、促进以创业带动就业、抓好重点群体就业创业等方面进行落实……"
+				},
+				{
+					"time":["6月","20","Jun."],
+					"link":"http://www.baidu.com",
+					"title":"人社部副部长游钧一行莅临安厨电商参观考察人社部副部长游钧一行莅临安厨电商参观",
+					"date":"2017.06.22 15:00",
+					"outline":"返乡下乡人员创业创新是大众创业、万众创新工作的重要组成部分，对于发展农村新产业新业态新模式，加快培育农业农村经济发展新动能具有重。主要以坚持实施就业优先战略、支持新就业形态发展、促进以创业带动就业、抓好重点群体就业创业等方面进行落实……"
+				},
+				{
+					"time":["6月","20","Jun."],
+					"title":"人社部副部长游钧一行莅临安厨电商参观考察人社部副部长游钧一行莅临安厨电商参观",
+					"date":"2017.06.22 15:00",
+					"link":"http://www.baidu.com",
+					"outline":"返乡下乡人员创业创新是大众创业、万众创新工作的重要组成部分，对于发展农村新产业新业态新模式，加快培育农业农村经济发展新动能具有重。主要以坚持实施就业优先战略、支持新就业形态发展、促进以创业带动就业、抓好重点群体就业创业等方面进行落实……"
+				}
+			]
+		},
+		"anchuNews":{
+			"title":"安厨新闻",
+			"content":[
+				{
+					"title":"人社部副部长游钧一行莅临安厨电商参观考察",
+					"date":"2017.06.22 15:00",
+					"link":"http://www.baidu.com"
+				},
+				{
+					"title":"人社部副部长游钧一行莅临安厨电商参观考察",
+					"date":"2017.06.22 15:00",
+					"link":"http://www.baidu.com"
+				},
+				{
+					"title":"人社部副部长游钧一行莅临安厨电商参观考察",
+					"date":"2017.06.22 15:00",
+					"link":"http://www.baidu.com"
+				},
+				{
+					"title":"人社部副部长游钧一行莅临安厨电商参观考察",
+					"date":"2017.06.22 15:00",
+					"link":"http://www.baidu.com"
+				},
+				{
+					"title":"人社部副部长游钧一行莅临安厨电商参观考察",
+					"date":"2017.06.22 15:00",
+					"link":"http://www.baidu.com"
+				}
+			]
+		}
+	},
+
 	"cooperation":[
 		{
 			"site":{
@@ -1118,37 +1208,44 @@
 				{
 					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
 					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
-					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域...",
+					"link":"http://www.baidu.com"
 				},
 				{
 					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
 					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
-					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域...",
+					"link":"http://www.baidu.com"
 				},
 				{
 					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
 					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
-					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域...",
+					"link":"http://www.baidu.com"
 				},
 				{
 					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
 					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
-					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域...",
+					"link":"http://www.baidu.com"
 				},
 				{
 					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
 					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
-					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域...",
+					"link":"http://www.baidu.com"
 				},
 				{
 					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
 					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
-					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域...",
+					"link":"http://www.baidu.com"
 				},
 				{
 					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
 					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
-					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域...",
+					"link":"http://www.baidu.com"
 				}
 			],
 			"currentNews":{
@@ -1167,17 +1264,20 @@
 				{
 					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
 					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
-					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域...",
+					"link":"http://www.baidu.com"
 				},
 				{
 					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
 					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
-					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域...",
+					"link":"http://www.baidu.com"
 				},
 				{
 					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
 					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
-					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域...",
+					"link":"http://www.baidu.com"
 				}
 			],
 			"currentNews":{
@@ -1196,22 +1296,26 @@
 				{
 					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
 					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
-					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域...",
+					"link":"http://www.baidu.com"
 				},
 				{
 					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
 					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
-					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域...",
+					"link":"http://www.baidu.com"
 				},
 				{
 					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
 					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
-					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域...",
+					"link":"http://www.baidu.com"
 				},
 				{
 					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
 					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
-					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域...",
+					"link":"http://www.baidu.com"
 				}
 			],
 			"currentNews":{
@@ -1230,22 +1334,26 @@
 				{
 					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
 					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
-					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域...",
+					"link":"http://www.baidu.com"
 				},
 				{
 					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
 					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
-					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域...",
+					"link":"http://www.baidu.com"
 				},
 				{
 					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
 					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
-					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域...",
+					"link":"http://www.baidu.com"
 				},
 				{
 					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
 					"title":"内蒙古兴安盟突泉县与安厨达成战略合作达成战略合作",
-					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域..."
+					"describe":"4月28日，内蒙古兴安盟突泉县与安厨正式达成战略合作。此次合作，安厨将为突泉县建设和运营县域...",
+					"link":"http://www.baidu.com"
 				}
 			],
 			"currentNews":{
