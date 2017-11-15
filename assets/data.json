@@ -1146,7 +1146,26 @@
 	},
 
 	"base":{
-		"banner":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg"
+		"banner":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+		"garden":{
+			"describe":"013年，安厨建立可供消费者体验的绿庐生态园，集农业休闲观光、农事体验、农产品种植（养殖）及销售于一体的高规格农旅结合绿色生态园。",
+			"gif":[
+				"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+				"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+				"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+				"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg"
+			]
+		},
+		"certificate":{
+			"describe":"以桐庐山地蔬菜专业合作社为主要载体，让农民充分参与和收益，建设集生态农业、创意农业、农事体验于一体的田园综合体，并于桐庐云游旅行社签订合作协议，供游客体验休闲。<br>基地遵循自然生产法则，运用现化管理方式和完善的农业基础设施。经中国绿色食品发展中心审核，基地种植的玉米、南瓜、葡萄等蔬果被认定为绿色食品。",
+			"images":[
+				"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+				"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+				"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+				"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg"
+			]
+		}
+
 	},
 
 

@@ -1,6 +1,17 @@
 <template>
   <section class="base-page_wrap">
-    农业基地
+    <div class="base-banner">
+    	<img :src="baseData.banner" alt="">
+    </div>
+
+    <div class="base-garden">
+    	<p v-html="baseData.garden.describe"></p>
+    </div>
+
+    <div class="base-certificate">
+    	<p v-html="baseData.certificate.describe"></p>
+    </div>
+
   </section>
 </template>
 
@@ -35,6 +46,37 @@
 <style lang="scss" scoped>
 	$class-pre:'base';
 	.#{$class-pre}{
-
+		&-banner{
+			height: 464px;
+			width: 100%;
+			overflow: hidden;
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+		&-garden{
+			width: 1200px;
+			margin: 0 auto;
+			padding: 90px 0 170px;
+			text-align: center;
+			p{
+				width: 770px;
+				display: inline-block;
+				font-size: 14px;
+				font-family: PingFangSC-Regular;
+			}
+		}
+		&-certificate{
+			width: 1200px;
+			margin: 0 auto;
+			text-align: center;
+			p{
+				width: 770px;
+				display: inline-block;
+				font-size: 14px;
+				font-family: PingFangSC-Regular;
+			}
+		}
 	}
 </style>
