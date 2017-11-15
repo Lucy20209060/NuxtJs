@@ -55,7 +55,13 @@ export const reputationData = () => { 				// 安厨声音
 /*
 	对农服务
 */
-export const agriculData = () => { 					// 政府合作
+export const trainData = () => { 					// 电商培训
+  return data.train
+}
+export const baseData = () => { 					// 农业基地
+  return data.base
+}
+export const agriculData = () => { 					// 农业基地
   return data.agricultural
 }
 

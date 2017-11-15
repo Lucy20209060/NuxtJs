@@ -1054,8 +1054,13 @@
 	],
 
 
-
 	"agricultural":{
+		"banner":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+		"site":{},
+		"describe":"简介的文字简介的文字简介的文字简介的文字简介的文字简介的文字简介的文字简介的文字简介的文字简介的文字简介的文字简介的文字简介的文字简介的文字简介的文字简介的文字简介的文字简介的文字简介的文字简介的文字简介的文字简介的文字简介的文字简介的文字简介的文字简介的文字简介的文字简介的文字简介的文字简"
+	},
+
+	"train":{
 		"header":{
 			"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
 			"title":"安厨农业电商培训致力于农业电商专业人才的培养和技能认定，师资团队实战经验丰富，多角度、系统和深入详解电商难题，孵化卓越农业电商人才。"
@@ -1087,14 +1092,6 @@
 					},
 					"portrait":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
 					"describe":"花名杜拉，从公务员到上市公司投融资部老总，浙江省农村电子商务创业带头人、浙江省农村青年电商创业导师、浙江省百名大学生农创客等荣誉称号，于2013年创立安厨。"
-				},
-				{
-					"name":{
-						"CHname":"4王晓桢（创始人）",
-						"ENname":"Janny Wang"
-					},
-					"portrait":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
-					"describe":"花名杜拉，从公务员到上市公司投融资部老总，浙江省农村电子商务创业带头人、浙江省农村青年电商创业导师、浙江省百名大学生农创客等荣誉称号，于2013年创立安厨。"
 				}
 			]
 		},
@@ -1108,11 +1105,48 @@
 						"如何入驻安厨微店如何入驻安厨微店如何入驻安厨",
 						"如何入驻安厨微店如何入驻安厨微店如何入驻安厨",
 						"如何入驻安厨微店如何入驻安厨微店如何入驻安厨"
-					]
+					],
+					"time":"2017/07/15 出版"
+				},
+				{
+					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+					"Q":"如何入驻安厨微店？",
+					"A":[
+						"如何入驻安厨微店如何入驻安厨微店如何入驻安厨",
+						"如何入驻安厨微店如何入驻安厨微店如何入驻安厨",
+						"如何入驻安厨微店如何入驻安厨微店如何入驻安厨"
+					],
+					"time":"2017/07/15 出版"
+				},
+				{
+					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+					"Q":"如何入驻安厨微店？",
+					"A":[
+						"如何入驻安厨微店如何入驻安厨微店如何入驻安厨",
+						"如何入驻安厨微店如何入驻安厨微店如何入驻安厨",
+						"如何入驻安厨微店如何入驻安厨微店如何入驻安厨"
+					],
+					"time":"2017/07/15 出版"
+				},
+				{
+					"img":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg",
+					"Q":"如何入驻安厨微店？",
+					"A":[
+						"如何入驻安厨微店如何入驻安厨微店如何入驻安厨",
+						"如何入驻安厨微店如何入驻安厨微店如何入驻安厨",
+						"如何入驻安厨微店如何入驻安厨微店如何入驻安厨"
+					],
+					"time":"2017/07/15 出版"
 				}
 			]
+		},
+		"promote":{
+			"title":"8种提升，活学活用"
 		}
+	},
 
+	"base":{
+		"banner":"http://wd-resource.cdn3.hzanchu.com/resource/image/optimized/2017/11/03/ea9a782bc0ede56e68845408e54fbb20.jpg"
 	},
 
 
