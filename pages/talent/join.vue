@@ -31,8 +31,8 @@
 
     <carouselMain 
 	    :itemWidth="536" 
-	    :itemHeight="600" 
-	    :interval="3000" 
+	    :itemHeight="610" 
+	    
 	    v-for="(item,index) in join" 
 	    :key="index" 
 	    v-if="activeSign == index"
@@ -141,7 +141,7 @@
 			text-align: left;
 			dt{
 				border-left: 2px solid #375D77;
-				padding-left: 15px;
+				padding: 15px 0 0 15px;
 				color: #375D77;
 				span{
 					display: block;
@@ -156,7 +156,7 @@
 				font-size: 14px;
 				color: #375D77;
 				line-height: 26px;
-				padding-top: 26px;
+				padding-top: 24px;
 			}
 		}
 	}

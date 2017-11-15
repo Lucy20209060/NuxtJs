@@ -6,6 +6,11 @@
 
     <div class="base-garden">
     	<p v-html="baseData.garden.describe"></p>
+    	<div class="base-garden-image">
+    		<span v-for="(gif,index) in baseData.garden.gif" :key="index">
+    			<img :src="gif" alt="">
+    		</span>
+    	</div>
     </div>
 
     <div class="base-certificate">
@@ -65,6 +70,26 @@
 				display: inline-block;
 				font-size: 14px;
 				font-family: PingFangSC-Regular;
+			}
+			&-image{
+				width: 1200px;
+				height: auto;
+				margin: 0 auto;
+				text-align: left;
+				padding-top: 86px;
+				span{
+					display: inline-block;
+					width: 220px;
+					height: auto;
+					margin-right: 106px;
+					&:last-child{
+						margin-right: 0;
+					}
+				}
+				img{
+					width: 100%;
+					height: auto;
+				}
 			}
 		}
 		&-certificate{
