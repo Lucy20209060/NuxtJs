@@ -46,7 +46,7 @@
     },
     created () {
     	this.talentData = talentData()
-			console.log(this.talentData)
+			// console.log(this.talentData)
     }
 	}
 </script>

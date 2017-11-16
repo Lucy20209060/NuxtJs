@@ -22,7 +22,11 @@ export const eventData = () => {				// 安厨事记
 export const storyData = () => {				// 安厨故事
 	return data.story
 }
-export const storyList = () => {				// 安厨故事详情
+
+/*
+	安厨故事详情
+*/
+export const storyList = () => {
 	return data.story.storyList
 }
 
@@ -39,9 +43,13 @@ export const storageData = () => {				// 仓储服务
 /*
 	安厨供应链
 */
+
 /*
 	安厨微店
 */
+export const shopData = () => {
+  return data.shop
+}
 /*
 	驰声走誉
 */
