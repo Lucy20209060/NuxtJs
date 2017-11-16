@@ -121,6 +121,7 @@
 	import { storyList,footerData } from '~/assets/getData'
 	import myVideo from '~/components/video'
 	export default {
+		layout: 'storyDetail',
 	  head: {
 	    title: '安厨故事'
 	  },
@@ -166,7 +167,7 @@
 	  	const data = storyList()
 	  	this.detail = data[this.storyId - 1]
 	  	this.footerData = footerData()
-	  	console.log(this.detail)
+	  	// console.log(this.detail)
 	  },
 	  watch: {
 	  	'imageId':'pauseVideo'

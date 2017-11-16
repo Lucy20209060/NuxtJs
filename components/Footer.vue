@@ -1,5 +1,5 @@
 <template>
-  <section class="footer" v-if="currentRoute != 'anchu-story-storyDetail-id'">
+  <section class="footer">
     <div class="footer-center">
     	<p class="footer-logo">
         <img :src="require(`~\/static\/img\/${footerData.logo}`)">
@@ -39,17 +39,13 @@
     data () {
       return {
         footerData: {},
-        imgSign: -1,
-        currentRoute:''
+        imgSign: -1
       }
     },
-    watch: {
-      // 如果路由有变化，会再次执行该方法
-      '$route': 'routeChange'
-    },
     created () {
-      this.footerData = footerData()
-      this.routeChange()
+      const data = footerData()
+      // console.log(data)
+      this.footerData = data
     },
     methods: {
       // 二维码滑过
@@ -59,10 +55,6 @@
       // 二维码滑出
       qrCodeOut (index) {
         this.imgSign = -1
-      },
-      // 路由变化
-      routeChange () {
-        this.currentRoute = this.$router.currentRoute.name
       }
     }
   }
