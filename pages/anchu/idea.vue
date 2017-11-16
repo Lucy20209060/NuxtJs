@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="idea-container">
     <div class="text-wrap" v-for="(item,index) in pageText" :key="index">
       <div class="text-center">
         <fourWorlds :title="item.title" />
@@ -34,7 +34,7 @@ export default {
 </script>
 
 <style scoped>
-  .container{
+  .idea-container{
     padding-top: 110px;
   }
   .text-wrap{

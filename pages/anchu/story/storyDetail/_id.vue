@@ -21,7 +21,7 @@
 							<i class="iconfont icon-suoyougushi"><em> 所有评论</em></i>
 						</a>
 					</p>
-
+					<!-- 图片 视频 展示区 -->
 					<div class="banner">
 						<div 
 							v-for="(item,index) in detail.detail.source" 
@@ -42,7 +42,13 @@
 						<i :class="['right','iconfont','icon-youjiantou',footerSign ? 'btn-active' : '']" @click="rightTap"></i>
 					</div>
 				</div>
-				<dl class="storyDetail-banner-text">
+				<!-- 描述 -->
+				<dl 
+					class="storyDetail-banner-text"
+					:style="{
+						background:`url(${detail.detail.source[imageId].backgroud}) no-repeat top center`
+					}"
+				>
 					<dt class="title" v-html="detail.detail.title"></dt>
 					<dd class="number">{{`${imageId + 1}/${detail.detail.source.length}`}}</dd>
 					<dd class="text" v-html="detail.detail.source[imageId].describe"></dd>
@@ -81,7 +87,7 @@
 							<i>{{footerData.contact.title}}</i>
 							<span v-for="(item,index) in footerData.contact.address" :key="index">
 								<em>{{item.name}}</em>
-								<!-- <i class="iconfont">&#xe69f;</i> -->
+								<i class="iconfont">&#xe69f;</i>
 							</span>
 
 						</dd>
@@ -160,6 +166,7 @@
 	  	const data = storyList()
 	  	this.detail = data[this.storyId - 1]
 	  	this.footerData = footerData()
+	  	console.log(this.detail)
 	  },
 	  watch: {
 	  	'imageId':'pauseVideo'
@@ -320,6 +327,8 @@
 				float: left;
 				box-sizing:border-box;
 				padding: 2% 20px 0;
+				background-size: 100% auto;
+				/*filter: blur(15px);*/
 				.title{
 					font-size: 23px;
 					color: #375D77;
@@ -422,7 +431,7 @@
 					}
 					dd{
 						float: left;
-						padding-top: 30px;
+						padding-top: 20px;
 						height: 100%;
 						box-sizing:border-box;
 					}
