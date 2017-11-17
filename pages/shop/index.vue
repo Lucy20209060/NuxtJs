@@ -106,6 +106,5 @@
 		font-size: 14px;
 		color: #375D77;
 		line-height: 26px;
-
   }
 </style>
