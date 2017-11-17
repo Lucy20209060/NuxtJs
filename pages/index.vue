@@ -1,7 +1,6 @@
 <template>
     <div class="index">
       <img :src="indexData.img" alt="">
-
       <i class="iconfont icon-tlxlacwn"></i>
     </div>
 </template>
