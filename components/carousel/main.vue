@@ -11,13 +11,6 @@
 	  <slot :currentActive="itemActive"></slot>
 	  <i class="iconfont zuo icon-zuoyou" @click="leftClick"></i>
 	  <i class="iconfont you icon-zuoyou" @click="rightClick"></i>
-	  <!-- <span 
-		  :style="{
-				height: itemHeight + 'px',
-				width: itemWidth/2 + 'px',
-				marginLeft:`-${itemWidth/4}px`,
-			}"
-	  ></span> -->
 	</div>
 </template>
 

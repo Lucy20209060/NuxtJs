@@ -1,13 +1,13 @@
 <template>
-  <section class="patent-page_wrap">
-    安厨专利
+  <section class="honor-page_wrap">
+    荣誉&专利
   </section>
 </template>
 
 <script>
 export default {
   head: {
-    title: '安厨专利'
+    title: '获得荣誉'
   }
 }
 </script>

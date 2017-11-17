@@ -4,12 +4,12 @@
 			<div class="storyDetail-banner">
 				<div class="storyDetail-banner-list">
 					<p class="header">
-						<a href="/anchu/story#list">
+						<a href="/story#list">
 							<i class="iconfont icon-suoyougushi"><em> 全部故事</em></i>
 						</a>
 						<nuxt-link 
 							:to="{
-			      		name:'anchu-story-storyDetail-id',
+			      		name:'story-id',
 			      		params:{
 			      			id:nextStoryId
 			      		}
@@ -17,7 +17,7 @@
 						>
 							<i class="iconfont icon-suoyougushi"><em> 下个故事</em></i>
 						</nuxt-link>
-						<a href="/anchu/story#comment">
+						<a href="/story#comment">
 							<i class="iconfont icon-suoyougushi"><em> 所有评论</em></i>
 						</a>
 					</p>

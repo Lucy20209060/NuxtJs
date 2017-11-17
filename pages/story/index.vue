@@ -10,7 +10,7 @@
 	      	v-for="(item,index) in story.storyList" 
 	      	:key="index"
 	      	:to="{
-	      		name:'anchu-story-storyDetail-id',
+	      		name:'story-id',
 	      		params:{
 	      			id:item.id
 	      		}

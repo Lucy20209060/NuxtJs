@@ -28,7 +28,7 @@
           <span @mouseover="navOver(indexs)">{{item.ZNTitle}}</span>
 
           <div 
-            :style="{ width: item.width ? '156px' : '90px' }"
+            :style="{ width: item.width ? item.width : '90px'}"
             :class="[
               'nav-list',
               indexs == navOverSign ? 'nav-over-active' : ''
@@ -57,6 +57,7 @@
             ZNTitle: '走近安厨',
             ENTitle: 'APPROACH<br>ANCHU',
             link: '/',
+            width:'94px',
             navList: [
               {
                 title: '安厨简介',
@@ -71,8 +72,12 @@
                 link: '/anchu/event'
               },
               {
-                title: '安厨故事',
-                link: '/anchu/story'
+                title: '荣誉&专利',
+                link: '/anchu/honor'
+              },
+              {
+                title: '团队力量',
+                link: '/anchu/team'
               }
             ]
           },
@@ -96,45 +101,6 @@
               {
                 title: '售后服务',
                 link: '/selection/service'
-              },
-              {
-                title: '案例介绍',
-                link: '/selection/case'
-              }
-            ]
-          },
-          {
-            ZNTitle: '安厨供应链',
-            ENTitle: 'SUPPLY<br>CHAIN',
-            link: '/supply',
-            navList: []
-          },
-          {
-            ZNTitle: '安厨微店',
-            ENTitle: 'ANCHU<br>SHOP',
-            link: '/shop',
-            navList: []
-          },
-          {
-            ZNTitle: '驰声走誉',
-            ENTitle: 'REPUTATION<br>RAPIDLY',
-            link: '/reputation',
-            navList: [
-              {
-                title: '安厨声音',
-                link: '/reputation'
-              },
-              {
-                title: '安厨专利',
-                link: '/reputation/patent'
-              },
-              {
-                title: '获得荣誉',
-                link: '/reputation/honor'
-              },
-              {
-                title: '政府合作',
-                link: '/reputation/cooperation'
               }
             ]
           },
@@ -142,7 +108,7 @@
             ZNTitle: '对农服务',
             ENTitle: 'SERVING<br>FARMERS ',
             link: '/agricultural',
-            width: true,
+            width: '156px',
             navList: [
               {
                 title: '县域农业电商服务',
@@ -163,19 +129,57 @@
             ]
           },
           {
+            ZNTitle: '电商平台',
+            ENTitle: 'E-C<br>PLATFORM',
+            link: '/website/shop',
+            width:'94px',
+            navList: [
+              {
+                title: '安厨微店',
+                link: '/website/shop'
+              },
+              {
+                title: '安厨供应链',
+                link: '/website/supply'
+              }
+            ]
+          },
+          {
+            ZNTitle: '安厨声音',
+            ENTitle: 'REPUTATION<br>RAPIDLY',
+            link: '/reputation',
+            navList: [
+              {
+                title: '动态资讯',
+                link: '/reputation'
+              },
+              {
+                title: '政府合作',
+                link: '/reputation/cooperation'
+              }
+            ]
+          },
+          {
+            ZNTitle: '安厨故事',
+            ENTitle: 'ANCHU<br>STPORY',
+            link: '/story',
+            width:'80px',
+            navList: [
+              {
+                title: '品牌故事',
+                link: '/story'
+              },
+              {
+                title: '帮农力量',
+                link: '/story/support'
+              }
+            ]
+          },
+          {
             ZNTitle: '求贤通道',
             ENTitle: 'SEEK<br>TALENT',
             link: '/talent',
-            navList: [
-              {
-                title: '兵强马壮',
-                link: '/talent'
-              },
-              {
-                title: '能者来战',
-                link: '/talent/join'
-              }
-            ]
+            navList: []
           }
         ],
         pagePath: '',
@@ -225,11 +229,11 @@
           this.navSign = 1
           return false
         }
-        if (currentRoute.indexOf('supply') !== -1) {
+        if (currentRoute.indexOf('agricultural') !== -1) {
           this.navSign = 2
           return false
         }
-        if (currentRoute.indexOf('shop') !== -1) {
+        if (currentRoute.indexOf('website') !== -1) {
           this.navSign = 3
           return false
         }
@@ -237,7 +241,7 @@
           this.navSign = 4
           return false
         }
-        if (currentRoute.indexOf('agricultural') !== -1) {
+        if (currentRoute.indexOf('story') !== -1) {
           this.navSign = 5
           return false
         }
