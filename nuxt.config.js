@@ -51,10 +51,10 @@ module.exports = {
   },
   generate: {
     routes: [
-      '/anchu/story/storyDetail/1',
-      '/anchu/story/storyDetail/2',
-      '/anchu/story/storyDetail/3',
-      '/anchu/story/storyDetail/4'
+      '/story/1',
+      '/story/2',
+      '/story/3',
+      '/story/4'
     ]
   }
 }
