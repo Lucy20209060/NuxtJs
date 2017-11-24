@@ -30,9 +30,6 @@
 
     	}
     },
-    // created () {
-      
-    // },
 	  mounted () {
 	  	this.itemLen = this.$children.length
 	  	this.setInterval()

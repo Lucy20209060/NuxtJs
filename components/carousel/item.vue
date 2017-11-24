@@ -13,7 +13,7 @@
 	  },
     data () {
     	return {
-    		itemStyle:{},			// 基础样式
+    		itemStyle:{},		// 基础样式
     		currentStyle:{}, 	// 当前样式
     	}
     },
@@ -71,8 +71,8 @@
 	    	}
 
 	    	this.itemStyle =this.merge({
-	    		width: this.$parent.itemWidth +'px',
-	    		height:this.$parent.itemHeight +'px',
+	    		width: this.$parent.itemWidth + 'px',
+	    		height:this.$parent.itemHeight + 'px',
 	    		marginLeft:`-${this.$parent.itemWidth/2}px`,
 	    		transform:`translateX(0) scale(1)`,
 	    		msTransform: `translateX(0) scale(1)`,
