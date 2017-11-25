@@ -51,7 +51,6 @@
 <script>
 	import fourWorlds from '~/components/iconTitle'
 	import underlineTitle from '~/components/underlineTitle'
-
 	import { elaborateData } from '~/assets/getData'
 	export default {
 	  head: {

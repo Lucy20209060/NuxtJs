@@ -31,10 +31,15 @@ module.exports = {
     color:'#129E83'
   },
   // plugins: ['~plugins/echarts'],
+  // modules:[
+  //   '@nuxtjs/axios',
+  //   '@nuxtjs/proxy'
+  // ],
   /*
   ** Build configuration
   */
   build: {
+    // vendor:['axios']
     /*
     ** Run ESLint on save
     */
@@ -49,6 +54,17 @@ module.exports = {
     //   }
     // }
   },
+  // proxy:[
+  //   [
+  //     '/api.php',
+  //     {
+  //       target:'http://b2bapi.anchumall.cc/api.php',
+  //       pathRewrite:{
+  //         '^/api.php':'/'
+  //       }
+  //     }
+  //   ]
+  // ],
   generate: {
     routes: [
       '/story/1',
