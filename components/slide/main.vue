@@ -1,21 +1,33 @@
 <template>
 	<div 
 		class="slide_wrap"
-        :style="{
+    :style="{
 			height: itemHeight + 'px',
 			width: itemWidth + 'px'
 		}"
+    @mouseover="carouselOver"
+		@mouseout="carouselOut"
 	>
-	  <slideItem v-for="(item,index) in totalItem" key="index">
-          <div></div>
+    <div class="items-wrap">
+      <slideItem v-for="(item,index) in totalItem" :key="index" :keys="index" :currentActive="itemActive">
+        <a 
+          target="_blank"
+          v-for="(child,index2) in item" 
+          :href="[child.link == ''?'javascript:;':child.link]"
+          class="image-wrap"  
+          :key="index2"
+        >
+          <img :src="child.image" />
+        </a>
       </slideItem>
-	  <i class="iconfont zuo icon-zuoyou"></i>
-	  <i class="iconfont you icon-zuoyou"></i>
+    </div>
+	  <i class="iconfont zuo icon-zuoyou" @click="leftClick"></i>
+	  <i class="iconfont you icon-zuoyou" @click="rightClick"></i>
 	</div>
 </template>
 
 <script>
-    import slideItem from '~/components/slide/item'
+  import slideItem from '~/components/slide/item'
 	export default {
         props: {
             itemWidth:Number,
@@ -28,18 +40,62 @@
         },
         data () {
             return {
-                
-
+                // activeIndex:1,      // 当前幻灯片index
+                itemLen: 0,			// 子元素数组的长度
+                itemActive: 0,		// 当前
+                timer: null,
+                clicktag: 0
             }
         },
         mounted () {
-            console.log(111,this.totalItem)
+          this.itemLen = this.totalItem.length
+          this.setInterval()
         },
         destroyed () {
-        // clearInterval(this.timer)
+          clearInterval(this.timer)
         },
         methods: {
+          // 左点击
+          leftClick () {
+            if (this.clicktag == 0) {
+              this.clicktag = 1;
+              this.itemActive <= 0 ? this.itemActive = this.itemLen - 1 : this.itemActive --
+              setTimeout( () => { 
+                this.clicktag = 0
+              }, 1000);
+            }
+          },
+          // 右点击
+          rightClick () {
+            if (this.clicktag == 0) {
+              this.clicktag = 1;
+              this.itemActive >= this.itemLen - 1 ? this.itemActive = 0 : this.itemActive ++
+              setTimeout( () => { 
+                this.clicktag = 0
+              }, 1000);
+            }
+          },
+          // 滑入
+          carouselOver () {
+            clearInterval(this.timer)
+          },
+          // 滑出
+          carouselOut () {
+            this.setInterval()
+          },
+          // 定时器
+          setInterval () {
             
+            if(!this.interval){
+              return false
+            }
+            this.timer = setInterval(() =>{
+              this.itemActive >= this.itemLen - 1 ? this.itemActive = 0 : this.itemActive ++
+            },this.interval)
+          },
+          tapIndex (index) {
+            this.itemActive = index
+          }
         },
         computed:{
             // 处理数据
@@ -47,29 +103,35 @@
                 const arr = this.resources;
                 const arrTem = [];
                 const len = Math.ceil(arr.length/6);
-                for(let i=0;i<len;i++){
-                    console.log(i)
-                    let array = {};
+                // 不满三页 补足三页
+                if(arr.length <=8){
+                  arrTem.push(arr.slice(0,8))
+                  arrTem.push(arr.slice(0,8))
+                  arrTem.push(arr.slice(0,8))
+                }else if(arr.length <=16){
+                  arrTem.push(arr.slice(0,8))
+                  arrTem.push(arr.slice(8,16))
+                  arrTem.push(arr.slice(0,8))
+                }else{
+                  for(let i=0;i<len;i++){
+                    let array = [];
                     array = Object.assign({},arr.slice(i*8,i*8 + 8))
                     arrTem.push(array)
+                  }
                 }
                 return arrTem
             }
         }
-        // [
-        //     {
-        //         slideData:[
-        //             {},
-        //             {}
-        //         ]
-        //     },
-        //     {},
-        //     {}
-        // ]
     }
 </script>
 
 <style lang="scss" scoped>
+  .items-wrap{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
 	.slide_wrap{
 		position: relative;
 		display: inline-block;
@@ -99,4 +161,16 @@
 		right: -100px;
 		transform:rotate(180deg);
 	}
+  .image-wrap{
+    // width: 24.62%;
+    width: 25%;
+    height: 50%;
+    float: left;
+    padding: .3%;
+    box-sizing: border-box;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
 </style>

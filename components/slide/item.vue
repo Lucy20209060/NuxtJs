@@ -41,32 +41,33 @@
 	    	// 左侧
 	    	else if(this.keys == (this.currentActive+1 == itemLen ? 0 : this.currentActive+1)){
 	    		this.currentStyle = {
-	    			transform:`translateX(${this.$parent.itemWidth*0.585}px) scale(.83)`,
-		    		msTransform: `translateX(${this.$parent.itemWidth*0.585}px) scale(.83)`,
-				    webkitTransform: `translateX(${this.$parent.itemWidth*0.585}px) scale(.83)`,
-				    zIndex:1,
-				    opacity:0.63,
-				    boxShadow: `0 0 6px 0 rgba(217,217,217,0.50)`
+	    			transform:`translateX(${this.$parent.itemWidth}px)`,
+		    		msTransform: `translateX(${this.$parent.itemWidth}px)`,
+				    webkitTransform: `translateX(${this.$parent.itemWidth}px)`,
+				    zIndex:-3,
+				    opacity:0,
+				    // boxShadow: `0 0 6px 0 rgba(217,217,217,0.50)`
 	    		}
 	    	}
 	    	// 右侧
 	    	else if(this.keys == (this.currentActive-1 == -1 ? itemLen-1 : this.currentActive-1)){
 	    		this.currentStyle = {
-	    			transform:`translateX(-${this.$parent.itemWidth*0.585}px) scale(.83)`,
-		    		msTransform: `translateX(-${this.$parent.itemWidth*0.585}px) scale(.83)`,
-				    webkitTransform: `translateX(-${this.$parent.itemWidth*0.585}px) scale(.83)`,
-				    zIndex:2,
-				    opacity:0.63,
-				    boxShadow: `0 0 6px 0 rgba(217,217,217,0.50)`
+	    			transform:`translateX(-${this.$parent.itemWidth}px)`,
+		    		msTransform: `translateX(-${this.$parent.itemWidth}px)`,
+				    webkitTransform: `translateX(-${this.$parent.itemWidth}px)`,
+				    zIndex:-3,
+				    opacity:0,
+				    // boxShadow: `0 0 6px 0 rgba(217,217,217,0.50)`
 	    		}
 	    	}
 	    	// 隐藏部分
 	    	else{
 	    		this.currentStyle = {
-	    			transform:`translateX(0) scale(.63)`,
-		    		msTransform: `translateX(0) scale(.63)`,
-				    webkitTransform: `translateX(0) scale(.63)`,
-				    zIndex:0
+	    			transform:`translateX(0)`,
+		    		msTransform: `translateX(0)`,
+				    webkitTransform: `translateX(0)`,
+                    zIndex:-3,
+                    opacity:0,
 	    		}
 	    	}
 
@@ -74,12 +75,12 @@
 	    		width: this.$parent.itemWidth + 'px',
 	    		height:this.$parent.itemHeight + 'px',
 	    		marginLeft:`-${this.$parent.itemWidth/2}px`,
-	    		transform:`translateX(0) scale(1)`,
-	    		msTransform: `translateX(0) scale(1)`,
-			    webkitTransform: `translateX(0) scale(1)`,
-			    zIndex:3,
+	    		transform:`translateX(0)`,
+	    		msTransform: `translateX(0)`,
+			    webkitTransform: `translateX(0)`,
+			    zIndex:100,
 			    opacity:1,
-			    boxShadow: `0 0 8px 0 rgba(217,217,217,0.50)`,
+			    // boxShadow: `0 0 8px 0 rgba(217,217,217,0.50)`,
 			    transition: `all 1s`
 	    	},this.currentStyle)
 	    },
@@ -101,10 +102,11 @@
 		overflow: hidden;
 		display: inline-block;
 		position: absolute;
-		left: 50%;
-		background: #FFFFFF;
-		box-shadow: 0 0 8px 0 rgba(217,217,217,0.50);
+		/* left: 50%; */
+		/* background: #FFFFFF; */
+		/* box-shadow: 0 0 8px 0 rgba(217,217,217,0.50); */
 		box-sizing:border-box;
 		cursor: pointer;
+        text-align: left;
 	}
 </style>

@@ -1,6 +1,12 @@
 <template>
   <section class="support-page_wrap">
-    <slideMain :itemWidth="670" :itemHeight="300" :resources="itemData"></slideMain>
+    <!-- 
+      itemWidth   宽度
+      itemHeight  高度
+      interval    定时，定时不设置或者设为0时 关闭自动轮播
+      resources   资源数组，所有的信息都放在一个数组里 [{},{},{},{},{},.....] 我已经分组了 8张图片一个幻灯片
+    -->
+    <slideMain :itemWidth="670" :itemHeight="300" :interval="0" :resources="itemData" />
   </section>
 </template>
 
@@ -18,7 +24,7 @@ export default {
     return{
       itemData:[
         {
-          link:'0',
+          link:'https://www.baidu.com',
           image:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1516734952680&di=1313e7164baaba60dc356217faee2b72&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201511%2F09%2F20151109191137_RKrZG.jpeg'
         },{
           link:'1',
@@ -44,9 +50,7 @@ export default {
         },{
           link:'8',
           image:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1516734952680&di=1313e7164baaba60dc356217faee2b72&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201511%2F09%2F20151109191137_RKrZG.jpeg'
-        },
-        
-        {
+        },{
           link:'9',
           image:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1516734952677&di=7085f53cdeedb021399966c0319d2cdc&imgtype=0&src=http%3A%2F%2Fwww.js.xinhuanet.com%2Ftitlepic%2F111649%2F1116494016_1441679015569_title0h.jpg'
         },{
