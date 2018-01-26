@@ -9,7 +9,12 @@
 		@mouseout="carouselOut"
 	>
     <div class="items-wrap">
-      <slideItem v-for="(item,index) in totalItem" :key="index" :keys="index" :currentActive="itemActive">
+      <slideItem 
+        v-for="(item,index) in totalItem" 
+        :key="index" 
+        :keys="index" 
+        :currentActive="itemActive"
+      >
         <a 
           target="_blank"
           v-for="(child,index2) in item" 
@@ -21,8 +26,8 @@
         </a>
       </slideItem>
     </div>
-	  <i class="iconfont zuo icon-zuoyou" @click="leftClick"></i>
-	  <i class="iconfont you icon-zuoyou" @click="rightClick"></i>
+	  <i class="iconfont left icon-zuoyou" @click="leftClick"></i>
+	  <i class="iconfont right icon-zuoyou" @click="rightClick"></i>
 	</div>
 </template>
 
@@ -154,10 +159,10 @@
 
 		}
 	}
-	.zuo{
+	.left{
 		left: -100px;
 	}
-	.you{
+	.right{
 		right: -100px;
 		transform:rotate(180deg);
 	}
