@@ -1,5 +1,5 @@
 <template>
-	<div class="carousel_item_wrap" :style="itemStyle" @click="itemClick">
+	<div class="carousel_item_wrap" :style="itemStyle">
 	  <slot></slot>
 	</div>
 </template>
@@ -24,11 +24,6 @@
 	  	this.positionSign()
 	  },
     methods: {
-    	// 点击某个职位
-    	itemClick () {
-    		this.$parent.tapIndex(this.keys)
-    	},
-
     	// 初始化
 	    positionSign () {
 	    	// 数组长度
