@@ -57,11 +57,13 @@
           this.setInterval()
         },
         destroyed () {
+          // 组件卸载时 一定要清除定时器
           clearInterval(this.timer)
         },
         methods: {
           // 左点击
           leftClick () {
+            // 防止频繁点击
             if (this.clicktag == 0) {
               this.clicktag = 1;
               this.itemActive <= 0 ? this.itemActive = this.itemLen - 1 : this.itemActive --
@@ -72,6 +74,7 @@
           },
           // 右点击
           rightClick () {
+            // 防止频繁点击
             if (this.clicktag == 0) {
               this.clicktag = 1;
               this.itemActive >= this.itemLen - 1 ? this.itemActive = 0 : this.itemActive ++
@@ -90,20 +93,17 @@
           },
           // 定时器
           setInterval () {
-            
+            // 没有设置定时 则不打开定时器
             if(!this.interval){
               return false
             }
             this.timer = setInterval(() =>{
               this.itemActive >= this.itemLen - 1 ? this.itemActive = 0 : this.itemActive ++
             },this.interval)
-          },
-          tapIndex (index) {
-            this.itemActive = index
           }
         },
         computed:{
-            // 处理数据
+            // 处理数据 分页
             totalItem(){
                 const arr = this.resources;
                 const arrTem = [];
