@@ -30,7 +30,9 @@ module.exports = {
   loading: {
     color:'#129E83'
   },
-  // plugins: ['~plugins/echarts'],
+  plugins: [
+    {src: '~assets/rem.js', ssr: false}
+  ],
   // modules:[
   //   '@nuxtjs/axios',
   //   '@nuxtjs/proxy'
