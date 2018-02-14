@@ -7,6 +7,14 @@
       resources   资源数组，所有的信息都放在一个数组里 [{},{},{},{},{},.....] 我已经分组了 8张图片一个幻灯片
     -->
     <slideMain :itemWidth="670" :itemHeight="300" :interval="0" :resources="itemData" />
+
+    <!-- 
+      分页器
+      allPage 总页数
+      currPage 当前页
+      changePage 页数改变
+     -->
+     
   </section>
 </template>
 
