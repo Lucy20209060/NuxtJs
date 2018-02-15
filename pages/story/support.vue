@@ -14,19 +14,21 @@
       currPage 当前页
       changePage 页数改变
      -->
-     
+    <pagination :allPage="10" :currPage="3" @changePage="changeThePage" />
   </section>
 </template>
 
 <script>
 import slideMain from '~/components/slide/main'
+import pagination from '~/components/pagination'
 
 export default {
   head: {
     title: '帮农力量'
   },
   components: {
-    slideMain
+    slideMain,
+    pagination
   },
   data() {
     return{
@@ -91,6 +93,11 @@ export default {
       ]
     }
   },
+  methods: {
+    changeThePage(val) {
+      console.log(val)
+    }
+  }
 
 }
 </script>
