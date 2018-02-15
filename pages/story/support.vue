@@ -13,8 +13,14 @@
       allPage 总页数
       currPage 当前页
       changePage 页数改变
+      <=5
+      1 2 3 4 5
+      <=10
+      1 2 3 ... 8 9 10
+      >10
+      1 2 3 ... 50 51 52 ... 98 99 100
      -->
-    <pagination :allPage="10" :currPage="3" @changePage="changeThePage" />
+    <pagination :allPage="page.allPage" :currPage="page.currPage" @changePage="changeThePage" />
   </section>
 </template>
 
@@ -32,6 +38,10 @@ export default {
   },
   data() {
     return{
+      page:{
+        allPage:10,
+        currPage:2
+      },
       itemData:[
         {
           link:'https://www.baidu.com',
@@ -96,6 +106,7 @@ export default {
   methods: {
     changeThePage(val) {
       console.log(val)
+      this.page.currPage = val
     }
   }
 
