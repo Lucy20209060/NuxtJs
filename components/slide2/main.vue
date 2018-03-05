@@ -1,5 +1,11 @@
 <template>
-	<div class="image-wrap">
+	<div 
+        class="image-wrap"
+        :style="{
+			height: itemHeight + 'px',
+			width: itemWidth + 'px'
+		}"
+    >
         <slideItem 
             v-for="(item,index) in totalItem" 
             :key="index" 
@@ -15,9 +21,9 @@
   import slideItem from '~/components/slide2/item'
 	export default {
         props: {
-            // itemWidth:Number,
-            // itemHeight:Number,
-            // interval:Number,
+            itemWidth:Number,
+            itemHeight:Number,
+            interval:Number,
             resources:Array
         },
         components: {
@@ -84,9 +90,8 @@
 
 <style lang="scss" scoped>
   .image-wrap{
-      width:1000px;
-      height: 200px;
       border: 1px solid #333;
       background: #fff;
+      overflow: hidden;
   }
 </style>

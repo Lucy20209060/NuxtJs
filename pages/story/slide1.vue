@@ -1,6 +1,6 @@
 <template>
   <section class="slide-page_wrap">
-    <slideMain :resources="itemData" />
+    <slideMain :itemWidth="1000" :itemHeight="200" :interval="3000" :resources="itemData" />
   </section>
 </template>
 

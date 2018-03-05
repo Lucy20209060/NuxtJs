@@ -33,6 +33,7 @@
 	.carousel_item_wrap{
         width: 20%;
         display: inline-block;
+        line-height: 0;
         img{
             width:100%;
         }
