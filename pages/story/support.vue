@@ -13,17 +13,15 @@
     <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 
-    <!-- 轮播图2 -->
-    <section>hahah</section>
-
-
 
 
   </section>
 </template>
 
 <script>
+// 轮播图1
 import slideMain from '~/components/slide/main'
+// 分页
 import pagination from '~/components/pagination'
 
 export default {
