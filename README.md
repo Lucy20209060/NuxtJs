@@ -2,6 +2,8 @@
 
 > Nuxt.js project
 
+localhost:3000
+
 ## Build Setup
 
 ``` bash
