@@ -1,12 +1,12 @@
 <template>
-	<div>
-        <!-- <slideItem 
+	<div class="image-wrap">
+        <slideItem 
             v-for="(item,index) in totalItem" 
             :key="index" 
             :keys="index" 
             :currentActive="itemActive"
-        > -->
-hhahha 
+        >
+            <img :src="item.image" />
         </slideItem>
 	</div>
 </template>
@@ -27,7 +27,7 @@ hhahha
             return {
                 // activeIndex:1,      // 当前幻灯片index
                 // itemLen: 0,			// 子元素数组的长度
-                // itemActive: 0,		// 当前
+                itemActive: 0,		// 当前
                 // timer: null,
                 // clicktag: 0
             }
@@ -47,8 +47,18 @@ hhahha
         computed:{
             // 处理数据 分页
             totalItem(){
-                // const arr = this.resources;
-                // const arrTem = [];
+                const arr = this.resources;
+                const arrTem = [];
+                if(arr.length === 0){
+                    console.error('数组不可为空')
+                    return false
+                }
+                if(arr.length < 6){
+                    
+                }else{
+                    // 不做处理
+                    return arr
+                }
                 // const len = Math.ceil(arr.length/6);
                 // // 不满三页 补足三页
                 // if(arr.length <=8){
@@ -73,5 +83,10 @@ hhahha
 </script>
 
 <style lang="scss" scoped>
-  
+  .image-wrap{
+      width:1000px;
+      height: 200px;
+      border: 1px solid #333;
+      background: #fff;
+  }
 </style>

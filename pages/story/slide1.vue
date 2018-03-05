@@ -55,3 +55,9 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+  .slide-page_wrap{
+    width: 100%;
+    min-width: 1200px;
+  }
+</style>
