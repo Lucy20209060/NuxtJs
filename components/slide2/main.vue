@@ -89,9 +89,9 @@
 </script>
 
 <style lang="scss" scoped>
-  .image-wrap{
-      border: 1px solid #333;
-      background: #fff;
-      overflow: hidden;
-  }
+    .image-wrap{
+        border: 1px solid #333;
+        background: #fff;
+        overflow: hidden;
+    }
 </style>
