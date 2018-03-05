@@ -24,16 +24,22 @@
 
 <script>
 import slideMain from '~/components/slide/main'
+import pagination from '~/components/pagination'
 
 export default {
   head: {
     title: '帮农力量'
   },
   components: {
-    slideMain
+    slideMain,
+    pagination
   },
   data() {
     return{
+      page:{
+        allPage:10,
+        currPage:2
+      },
       itemData:[
         {
           link:'https://www.baidu.com',
@@ -90,6 +96,12 @@ export default {
       ]
     }
   },
+  methods: {
+    changeThePage(val) {
+      console.log(val)
+      this.page.currPage = val
+    }
+  }
 
 }
 </script>
