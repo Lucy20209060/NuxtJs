@@ -55,10 +55,12 @@
             totalItem(){
                 const arr = this.resources;
                 const arrTem = [];
+                // 数组不可为空
                 if(arr.length === 0){
                     console.error('数组不可为空')
                     return false
                 }
+                // 数组长度至少为6 不够补足
                 if(arr.length < 6){
                     
                 }else{
