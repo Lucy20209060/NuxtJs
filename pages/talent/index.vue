@@ -41,7 +41,6 @@
     >
     	<template scope="props">
 	    	<carouselItem v-for="(job,index) in item.job" :key="index" :keys="index" :currentActive="props.currentActive">
-
 	    		<dl class="join-item">
 	    			<dt>
 	    				<span>{{job.title.CHtitle}}</span>
@@ -56,7 +55,6 @@
 	    				<p v-for="(demand,index) in job.demand.content" :key="index">{{`${index+1}、${demand}`}}</p>
 	    			</dd>
 	    		</dl>
-
 	    	</carouselItem>
     	</template>
     </carouselMain>
